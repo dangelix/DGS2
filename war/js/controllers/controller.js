@@ -5,97 +5,42 @@ app.config([ '$routeProvider', function($routeProvider) {
 		templateUrl : "pages/inicio.html",
 		controller : "inicioController"
 	});
-	$routeProvider.when('/empresa', {
-		templateUrl : "pages/datosEmpresa.html",
-//		controller : "empresaController"
-	});
-	$routeProvider.when('/Personas', {
-		templateUrl : "pages/Personas.html",
+	
+	$routeProvider.when('/personas', {
+		templateUrl : "pages/personas.html",
 		controller : "PersonasController"
 	});
-	$routeProvider.when('/Personas/edit/:id', {
-		templateUrl : "pages/PersonasEdita.html",
-		controller : "PersonasEditController"
-	});
-	$routeProvider.when('/proveedores', {
-		templateUrl : "pages/proveedores.html",
-		controller : "proveedoresController"
-	});
-	$routeProvider.when('/proveedores/edit/:id', {
-		templateUrl : "pages/proveedoresEdita.html",
-		controller : "proveedoresEditController"
-	});
-	$routeProvider.when('/herramientas', {
-		templateUrl : "pages/herramientas.html",
-		controller : "herramientasController"
-	});
-	$routeProvider.when('/herramientas/edit/:id', {
-		templateUrl : "pages/herramientasEdita.html",
-		controller : "herramientasEditController"
-	});
-	$routeProvider.when('/tornillos', {
-		templateUrl : "pages/tornillos.html",
-		controller : "tornillosController"
-	});
-	$routeProvider.when('/tornillos/edit/:id', {
-		templateUrl : "pages/tornillosEdita.html",
-		controller : "tornillosEditController"
-	});
+
 	$routeProvider.when('/altaPersona', {
 		templateUrl : "pages/altaPersona.html",
 		controller : "PersonasController"
 	});
-	$routeProvider.when('/altaProveedor', {
-		templateUrl : "pages/altaProveedor.html",
-		controller : "proveedoresController"
+	
+	$routeProvider.when('/personas/editar/:id', {
+		templateUrl : "pages/personasEdita.html",
+		controller : "PersonasEditController"
 	});
-	$routeProvider.when('/altaHerramienta', {
-		templateUrl : "pages/altaHerramienta.html",
-		controller : "herramientasController"
+	
+		$routeProvider.when('/listas', {
+		templateUrl : "pages/listas.html",
+		controller : "ListasController"
 	});
 
-	$routeProvider.when('/altaLotes/:tipo/:id', {
-		templateUrl : "pages/altaLotes.html",
-		controller : "lotesController"
+	$routeProvider.when('/altaLista', {
+		templateUrl : "pages/altaLista.html",
+		controller : "ListasController"
 	});
 	
-	$routeProvider.when('/ventas', {
-		templateUrl : "pages/venta.html",
-		controller : "ventaController"
+	$routeProvider.when('/listas/edit/:id', {
+		templateUrl : "pages/listasEdita.html",
+		controller : "ListasEditController"
 	});
 	
-	$routeProvider.when('/ventasList', {
-		templateUrl : "pages/ventasList.html",
-		controller : "ventaListController"
-	});
-
-	$routeProvider.when('/inventario', {
-		templateUrl : "pages/inventario.html",
-		
-		controller : "inventarioController"
-	});
-	
-	$routeProvider.when('/alertas', {
-		templateUrl : "pages/alertas.html",
-		
-		controller : "alertaController"
-	});
-	
-	$routeProvider.when('/login', {
-		templateUrl : "pages/login.html",
+	$routeProvider.when('/login' ,  {
+		templateUrl : "pages/login.html" ,
 		controller : "navigation"
-	});
-
-	$routeProvider.when('/altaperfiles', {
-		templateUrl : "pages/altaperfil.html",
-		controller : "perfilController"
-	})
-
-	$routeProvider.when('/modificarperfiles', {
-		templateUrl : "pages/modificaperfiles.html",
-		controller : "controladorListaPerfiles"
-	})
-
+	}) ;
+	
 	$routeProvider.when('/altausuarios', {
 		templateUrl : "pages/altausuario.html",
 		controller : "usuarioController"
@@ -115,26 +60,7 @@ app.config([ '$routeProvider', function($routeProvider) {
 		controller : "archivoController"
 	});
 	
-	$routeProvider.when('/datosFacturacion', {
-		templateUrl : "pages/emisores.html",
-		controller : "emisoresListController"
-	});
-	
-	$routeProvider.when('/formula', {
-		templateUrl : "pages/formula.html",
-		controller : "formulaController"
-	});
-	
-	$routeProvider.when('/altaEmisor', {
-		templateUrl : "pages/altaEmisor.html",
-		controller : "emisorController"
-	});
-	
-	$routeProvider.when('/editEmisor/:id', {
-		templateUrl : "pages/altaEmisor.html",
-		controller : "emisorEditController"
-	});
-	
+		
 	$routeProvider.otherwise({
 		redirectTo : '/inicio'
 	});

@@ -6,6 +6,7 @@ import com.googlecode.objectify.ObjectifyService;
 
 import gob.dgs.dgs.model.Persona;
 import gob.dgs.dgs.model.Usuario;
+import gob.dgs.dgs.model.ListaAsistencia;
 import gob.dgs.dgs.model.Perfil;
 
 
@@ -15,6 +16,7 @@ public class Register {
 
 		ObjectifyService.register(Usuario.class);
 		ObjectifyService.register(Perfil.class);
+		ObjectifyService.register(ListaAsistencia.class);
 		
 		
 

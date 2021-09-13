@@ -1,9 +1,8 @@
-
 <div class="col-sm-8 text-left">
 	<div id="page-wrapper">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Personas</h1>
+				<h1 class="page-header">Listas de Asistencia</h1>
 			</div>
 			<div class="col-md-12">
 				<div class="form-group col-md-6">
@@ -12,7 +11,7 @@
 				<button type="submit" class="btn btn-primary" ng-click="buscar()">
       		  <span class="glyphicon glyphicon-search"></span>
       		</button>
-      		<button class="btn btn-primary" data-toggle="tooltip" title="Mostrar Todos" ng-click="PersonasPage(1)">
+      		<button class="btn btn-primary" data-toggle="tooltip" title="Mostrar Todos" ng-click="ListasPage(1)">
       		  <span class="glyphicon glyphicon-eye-open"></span></button>
 			</div>
 		</div>
@@ -20,7 +19,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading">Consulta General de Personas</div>
+					<div class="panel-heading">Consulta General de Listas de Asistencia</div>
 					<!-- /.panel-heading -->
 					<div class="panel-body">
 						<table width="100%"
@@ -29,37 +28,39 @@
 							<thead>
 								<tr>
 <!-- 									<th>Numero de Persona</th> -->
-									<th>Nombre</th>
-									<th>Cargo</th>
-									<th>T&iacute;tulo</th>
-					
-									<th>Tel&eacute;fono</th>
-								
+									<th>Proyecto</th>
+									<th>Fecha</th>
+														
 									<th>Acciones</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr ng-repeat="Persona in Personas"
+								<tr ng-repeat="Lista in Listas"
 									" class="odd gradeX">
-<!-- 									<td>{{Persona.id}}</td> -->
-									<td>{{Persona.nombre}}</td>
-									<td>{{Persona.cargo}}</td>
-									<td>{{Persona.titulo}}</td>
-									<td>{{Persona.telefono}}</td>
+
+									<td>{{Lista.proyecto}}</td>
+									<td>{{Lista.fecha}}</td>			
 									
 									<td>
 
 										<button class="btn btn-success" data-toggle="tooltip"
-											title="Editar" ng-click="editar(Persona.id)">
+											title="Editar" ng-click="editar(Lista.id)">
 											<i class="glyphicon glyphicon-pencil"></i>
 										</button>
+										
+										<a class="btn btn-warning"
+										data-toggle="tooltip"
+										title="Imprimir Ticket" href="listas/pdf/{{Lista.id}}"
+										download="{{'ListaAsistencia_'+Lista.proyecto+'.pdf'}}"> <i
+											class="glyphicon glyphicon-print"></i>
+									</a>
 
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<button type="submit" value="enviar" class="btn btn-primary"
-							onclick="location='#/altaPersona'">Registrar Persona</button>
+							onclick="location='#/altaLista'">Registrar Lista de Asistencia</button>
 						<!-- /.table-responsive -->
 					</div>
 					<!-- /.panel-body -->
@@ -69,7 +70,7 @@
 			<div>
 				<ul class="pagination .pagination-sm">
 					<li ng-repeat="abc in paginas" id="{{'pag'+abc}}"><a
-						ng-click="PersonasPage(abc)">{{abc}}</a></li>
+						ng-click="ListasPage(abc)">{{abc}}</a></li>
 
 				</ul>
 			</div>

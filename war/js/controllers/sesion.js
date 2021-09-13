@@ -44,7 +44,7 @@ app.controller('navigation', [ 'sessionService', '$rootScope', '$scope',
 		'$http', '$location',
 
 		function(sessionService, $rootScope, $scope, $http, $location) {
-
+//	        alert("Se esta en sesion")
 			$scope.credentials = {};
 			$scope.login = function() {
 				sessionService.authenticate($scope.credentials, function() {

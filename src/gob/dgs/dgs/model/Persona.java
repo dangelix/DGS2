@@ -18,10 +18,10 @@ public class Persona {
 	
 	//private TUbicacion domicilio;
 	
+	private String cargo;
+	
+	
 	private String telefono;
-	
-	
-	private String email;
 	
 	public Long getId() {
 		return id;
@@ -49,15 +49,22 @@ public class Persona {
 		this.telefono = telefono;
 	}
 
-
-	public String getEmail() {
-		return email;
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
-	
-	
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+
 
 }

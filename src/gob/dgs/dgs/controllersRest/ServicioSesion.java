@@ -54,6 +54,8 @@ public class ServicioSesion {
 	public void currentUser(HttpServletResponse res, HttpServletRequest req) throws IOException {
 		HttpSession s = req.getSession();
 		String n = (String) s.getAttribute("userName");
+	//	System.out.println("aqui ando2:"+s);
+		
 		if (n == null) {
 			res.sendError(400);
 		}

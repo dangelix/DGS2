@@ -15,6 +15,7 @@
 
 	<!-- Beans DAOs GAE storage implementation -->
 	<bean class="gob.dgs.dgs.dao.imp.PersonaDAOImp"/>
+	<bean class="gob.dgs.dgs.dao.imp.ListaAsistenciaDaoImp"/>
 	
 <!-- 	<bean class="gob.dgs.dgs.security.UsuarioDAOImp" /> -->
 	<bean class="gob.dgs.dgs.security.PerfilDAOImp" />

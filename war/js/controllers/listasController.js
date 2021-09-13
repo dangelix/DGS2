@@ -1,4 +1,4 @@
-app.service('PersonasService', [
+app.service('ListasService', [
 	'$http',
 	'$q',
 	'$location',
@@ -6,27 +6,27 @@ app.service('PersonasService', [
 	'$window',
 	function($http, $q, $location,$rootScope, $window) {
 	
-	this.registraPersona = function(newPersona) {
+	this.registraLista = function(newLista) {
 		var d = $q.defer();
-		$http.post("/personas/add/", newPersona).then(
+		$http.post("/listas/add/", newLista).then(
 			function(response) {
 				d.resolve(response.data);
 			});
 		return d.promise;
 	}
-	this.findPersonas = function(page) {
+	this.findListas = function(page) {
 		var d = $q.defer();
-		$http.get("/personas/findAll/"+page).then(function(response) {
+		$http.get("/listas/findAll/"+page).then(function(response) {
 			d.resolve(response.data);
 		}, function(response) {
 			d.reject(response);
 		});
-		return d.promise;	
+		return d.promise;
 	};
 	
-	this.findPersonasFull= function(){
+	this.findListasFull= function(){
 		var d = $q.defer();
-		$http.get("/personas/findFull").then(function(response) {
+		$http.get("/listas/findFull").then(function(response) {
 			d.resolve(response.data);
 		}, function(response) {
 			d.reject(response);
@@ -34,9 +34,9 @@ app.service('PersonasService', [
 		return d.promise;
 	}
 	
-	this.findPersona = function(id) {
+	this.findLista = function(id) {
 		var d = $q.defer();
-		$http.get("/personas/find/"+id).then(function(response) {
+		$http.get("/listas/find/"+id).then(function(response) {
 			d.resolve(response.data);
 		}, function(response) {
 			d.reject(response);
@@ -46,7 +46,7 @@ app.service('PersonasService', [
 	
 	this.buscar= function(search){
 		var d = $q.defer();
-		$http.get("/personas/search/"+search).then(function(response) {
+		$http.get("/listas/search/"+search).then(function(response) {
 			d.resolve(response.data);
 		}, function(response) {
 			d.reject(response);
@@ -56,7 +56,7 @@ app.service('PersonasService', [
 	
 	this.getPages= function(){
 		var d = $q.defer();
-		$http.get("/personas/pages").then(function(response) {
+		$http.get("/listas/pages").then(function(response) {
 			d.resolve(response.data);
 		}, function(response) {
 			d.reject(response);
@@ -65,13 +65,13 @@ app.service('PersonasService', [
 	}
 	
 }])
-app.controller("PersonasController",[
+app.controller("ListasController",[
 	'$scope',
-	'PersonasService',
+	'ListasService',
 	'$routeParams',
 	'$location',
 	'$window',
-	function($scope, PersonasService, $routeParams,$location,$window){
+	function($scope, ListasService, $routeParams,$location,$window){
 	
 		$scope.llenarPags=function(){
 			var inicio=0;
@@ -92,59 +92,59 @@ app.controller("PersonasController",[
 			$('#pag'+$scope.paginaActual).addClass("active");
 		}
 		
-	$scope.registraPersona = function(newPersona) {
-		console.log(newPersona);		
-		PersonasService.registraPersona(newPersona).then(function(newPersona) {
-					alert("Persona Agregada");
+	$scope.registraLista = function(newLista) {
+		console.log(newLista);		
+		ListasService.registraLista(newLista).then(function(newLista) {
+					alert("Lista Agregada");
 //					$window.location.reload();
-					$location.path("/personas");
+					$location.path("/listas");
 				})
 	}
-	$scope.PersonasPage = function(page) {
+	$scope.ListasPage = function(page) {
 		$scope.paginaAcutal=page;
-		PersonasService.findPersonas(page).then(
+		ListasService.findListas(page).then(
 			function(data) {
-				$scope.Personas = data;				
+				$scope.Listas = data;				
 				$scope.llenarPags();
 				
 			})
 	}
 	
-	$scope.PersonasPage(1);
+	$scope.ListasPage(1);
 	
-	PersonasService.getPages().then(function(data){
+	ListasService.getPages().then(function(data){
 		$scope.maxPage=data;
 	})
 	
 	$scope.editar = function(id) {
-		$location.path("/personas/edit/" + id);
+		$location.path("/listas/edit/" + id);
 	}
 	
 	$scope.buscar= function(){
-		PersonasService.buscar($scope.searchText).then(function(data){
-			$scope.Personas= data;
+		ListasService.buscar($scope.searchText).then(function(data){
+			$scope.Listas= data;
 			$scope.searchText="";
 		})
 	}
 	
 }]);
-app.controller("PersonasEditController",[
+app.controller("ListasEditController",[
 	'$scope',
-	'PersonasService',
+	'ListasService',
 	'$routeParams',
 	'$location',
 	'$window',
-	function($scope, PersonasService, $routeParams,$location, $window){
-		PersonasService.findPersona($routeParams.id).then(function(data){
-			$scope.newPersona=data;
+	function($scope, ListasService, $routeParams,$location, $window){
+		ListasService.findLista($routeParams.id).then(function(data){
+			$scope.newLista=data;
 		})
 		
-		$scope.editaPersona = function(newPersona) {
-		console.log(newPersona);		
-		PersonasService.registraPersona(newPersona).then(function(newPersona) {
-					alert("Persona Modificado");
+		$scope.editaLista = function(newLista) {
+		console.log(newLista);		
+		ListasService.registraLista(newLista).then(function(newLista) {
+					alert("Lista Modificada");
 //					$window.location.reload();
-					$location.path("/Personas");
+					$location.path("/Listas");
 				})
 	}	
 }]);

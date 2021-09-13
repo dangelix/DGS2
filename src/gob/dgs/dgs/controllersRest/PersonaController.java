@@ -36,6 +36,7 @@ public class PersonaController {
 	"/add" }, method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
 	public void add(HttpServletRequest re, HttpServletResponse rs, @RequestBody String json) throws IOException{
 		if(Util.verificarPermiso(re, usuariodao, perfildao, 10, 11)){
+			System.out.println("siiis");
 			Persona c= (Persona) JsonConvertidor.fromJson(json, Persona.class);
 			personasdao.guardar(c);
 			rs.getWriter().println(JsonConvertidor.toJson(c));
