@@ -45,7 +45,7 @@ public class ListaAsistenciaController {
 	@RequestMapping(value = {"/add" }, method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
 	public void add(HttpServletRequest re, HttpServletResponse rs, @RequestBody String json) throws IOException{
 		if(Util.verificarPermiso(re, usuariodao, perfildao, 10, 11)){
-			System.out.println("json:"+json);
+			System.out.println("jsonnnnnn:"+json);
 			ListaAsistencia c= (ListaAsistencia) JsonConvertidor.fromJson(json, ListaAsistencia.class);
 			ListaAsistenciasdao.guardar(c);
 			rs.getWriter().println(JsonConvertidor.toJson(c));
