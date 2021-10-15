@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import gob.dgs.dgs.dao.ListaAsistenciaDao;
+import gob.dgs.dgs.dao.PersonaDAO;
 import gob.dgs.dgs.model.ListaAsistencia;
 import gob.dgs.dgs.model.Persona;
 import gob.dgs.dgs.security.PerfilDAO;
@@ -31,14 +32,20 @@ public class ListaAsistenciaController {
 	@Autowired
 	ListaAsistenciaDao ListaAsistenciasdao;
 	
+	@Autowired
+	PersonaDAO personadao;
+	
 	@Autowired UsuarioDAO usuariodao;
 	
 	@Autowired PerfilDAO perfildao;
 	
+	@Autowired
+	PersonaDAO personasdao;
+	
 	@RequestMapping(value = {"/add" }, method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
 	public void add(HttpServletRequest re, HttpServletResponse rs, @RequestBody String json) throws IOException{
 		if(Util.verificarPermiso(re, usuariodao, perfildao, 10, 11)){
-			System.out.println("siiis");
+			System.out.println("json:"+json);
 			ListaAsistencia c= (ListaAsistencia) JsonConvertidor.fromJson(json, ListaAsistencia.class);
 			ListaAsistenciasdao.guardar(c);
 			rs.getWriter().println(JsonConvertidor.toJson(c));
@@ -59,21 +66,35 @@ public class ListaAsistenciaController {
 //		}
 	}
 	
-//	@RequestMapping(value = {
-//	"/search/{search}" }, method = RequestMethod.GET, produces = "application/json")
-//	public void search(HttpServletRequest re, HttpServletResponse rs, @PathVariable String search) throws IOException{
-//		if(Util.verificarsesion(re)){
-//		List<ListaAsistencia> lista= ListaAsistenciasdao.buscar(search);
-//		rs.getWriter().println(JsonConvertidor.toJson(lista));
+	@RequestMapping(value = {
+	"/delete/{id}" }, method = RequestMethod.GET, produces = "application/json")
+	public void delete(HttpServletRequest re, HttpServletResponse rs, @PathVariable Long id) throws IOException{
+		AsignadorDeCharset.asignar(re, rs);
+		System.out.println("id"+id);
+		//	if(Util.verificarPermiso(re, usuariodao, perfildao, 11)){
+		ListaAsistencia c= ListaAsistenciasdao.cargar(id);
+		ListaAsistenciasdao.delete(c);
+		rs.getWriter().println(JsonConvertidor.toJson(c));
 //		}else{
 //			rs.sendError(403);
 //		}
-//	}
+	}
+	
+	@RequestMapping(value = {
+	"/search/{search}" }, method = RequestMethod.GET, produces = "application/json")
+	public void search(HttpServletRequest re, HttpServletResponse rs, @PathVariable String search) throws IOException{
+		if(Util.verificarsesion(re)){
+		List<Persona> lista= personadao.buscar(search);
+		rs.getWriter().println(JsonConvertidor.toJson(lista));
+		}else{
+			rs.sendError(403);
+		}
+	}
 	
 
 	@RequestMapping(value = {
 	"/findAll/{page}" }, method = RequestMethod.GET, produces = "application/json")
-	public void search(HttpServletRequest re, HttpServletResponse rs, @PathVariable int page) throws IOException{
+	public void findAll(HttpServletRequest re, HttpServletResponse rs, @PathVariable int page) throws IOException{
 		AsignadorDeCharset.asignar(re, rs);
 		if(Util.verificarsesion(re)){
 		List<ListaAsistencia> lista= ListaAsistenciasdao.todos(page);
@@ -94,6 +115,30 @@ public class ListaAsistenciaController {
 			rs.sendError(403);
 		}
 	}
+	
+	@RequestMapping(value = {
+	"/personas/findAll/{page}" }, method = RequestMethod.GET, produces = "application/json")
+	public void personasFindAll(HttpServletRequest re, HttpServletResponse rs, @PathVariable int page) throws IOException{
+		AsignadorDeCharset.asignar(re, rs);
+		if(Util.verificarsesion(re)){
+		List<Persona> lista= personasdao.todos(page);
+		rs.getWriter().println(JsonConvertidor.toJson(lista));
+		}else{
+			rs.sendError(403);
+		}
+	}
+	
+	@RequestMapping(value = {
+	"/personas/findFull" }, method = RequestMethod.GET, produces = "application/json")
+	public void personasFindFull(HttpServletRequest re, HttpServletResponse rs) throws IOException{
+		AsignadorDeCharset.asignar(re, rs);
+		if(Util.verificarsesion(re)){
+		List<Persona> lista= personasdao.todos();
+		rs.getWriter().println(JsonConvertidor.toJson(lista));
+		}else{
+			rs.sendError(403);
+		}
+	}
 
 	
 	@RequestMapping(value = {
@@ -104,7 +149,7 @@ public class ListaAsistenciaController {
 	}
 	
 	  @RequestMapping(value = { "/pdf/{idLista}" },  method = RequestMethod.GET, produces = "application/pdf")
-		public void generaVale(HttpServletResponse response, HttpServletRequest request, @PathVariable Long idLista) throws IOException {
+		public void generaPdf(HttpServletResponse response, HttpServletRequest request, @PathVariable Long idLista) throws IOException {
 		  System.out.println("genera ticket con precio");
 //	   if(SesionController.verificarPermiso2(request, usuarioDao, perfilDAO, 20, sessionDao,userName)){
 		   response.setContentType("Application/Pdf");
@@ -135,5 +180,6 @@ public class ListaAsistenciaController {
 //			response.sendError(403);
 //		}
 	}
+
 		
 }

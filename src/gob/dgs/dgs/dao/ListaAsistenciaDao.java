@@ -5,7 +5,8 @@ import java.util.List;
 import gob.dgs.dgs.model.ListaAsistencia;
 
 public interface ListaAsistenciaDao {
-public void guardar(ListaAsistencia c);
+	
+	public void guardar(ListaAsistencia c);
 	
 	public ListaAsistencia cargar(Long id);
 
@@ -16,5 +17,7 @@ public void guardar(ListaAsistencia c);
 	public List<ListaAsistencia> todos();
 	
 	public int pages();
+	
+	public void delete(ListaAsistencia c);
 
 }

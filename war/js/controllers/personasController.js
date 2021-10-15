@@ -22,7 +22,7 @@ app.service('PersonasService', [
 			d.reject(response);
 		});
 		return d.promise;	
-	};
+	}
 	
 	this.findPersonasFull= function(){
 		var d = $q.defer();
@@ -42,7 +42,7 @@ app.service('PersonasService', [
 			d.reject(response);
 		});
 		return d.promise;
-	};
+	}
 	
 	this.buscar= function(search){
 		var d = $q.defer();

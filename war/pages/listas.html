@@ -30,6 +30,8 @@
 <!-- 									<th>Numero de Persona</th> -->
 									<th>Proyecto</th>
 									<th>Fecha</th>
+									<th>Hora</th>
+<!-- 									<th>Asistentes</th> -->
 														
 									<th>Acciones</th>
 								</tr>
@@ -39,13 +41,19 @@
 									" class="odd gradeX">
 
 									<td>{{Lista.proyecto}}</td>
-									<td>{{Lista.fecha}}</td>			
-									
+									<td>{{Lista.fecha}}</td>
+									<td>{{Lista.hora}}</td>	
+											
+<!-- 									<td>{{Lista.asistentes}}</td> -->
 									<td>
 
-										<button class="btn btn-success" data-toggle="tooltip"
-											title="Editar" ng-click="editar(Lista.id)">
-											<i class="glyphicon glyphicon-pencil"></i>
+<!-- 										<button class="btn btn-success" data-toggle="tooltip" -->
+<!-- 											title="Editar" ng-click="editar(Lista.id)"> -->
+<!-- 											<i class="glyphicon glyphicon-pencil"></i> -->
+<!-- 										</button> -->
+										<button class="btn btn-danger" data-toggle="tooltip"
+											title="Borrar" ng-click="borrar(Lista.id)">
+											<i class="glyphicon glyphicon-remove"></i>
 										</button>
 										
 										<a class="btn btn-warning"

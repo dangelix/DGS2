@@ -16,6 +16,15 @@
 	<!-- Beans DAOs GAE storage implementation -->
 	<bean class="gob.dgs.dgs.dao.imp.PersonaDAOImp"/>
 	<bean class="gob.dgs.dgs.dao.imp.ListaAsistenciaDaoImp"/>
+	<bean class="gob.dgs.dgs.dao.imp.AnalisisDaoImpl"/>
+	<bean class="gob.dgs.dgs.dao.imp.ApartadoDaoImpl"/>
+	<bean class="gob.dgs.dgs.dao.imp.CumplimientoDaoImpl"/>
+	<bean class="gob.dgs.dgs.dao.imp.EntregableDaoImpl"/>
+	<bean class="gob.dgs.dgs.dao.imp.PropuestaDaoImpl"/>
+	<bean class="gob.dgs.dgs.dao.imp.ProyectoDaoImpl"/>
+	<bean class="gob.dgs.dgs.dao.imp.RequerimientoDaoImpl"/>
+	<bean class="gob.dgs.dgs.dao.imp.ReunionDaoImpl"/>
+	<bean class="gob.dgs.dgs.dao.imp.RevisionDaoImpl"/>
 	
 <!-- 	<bean class="gob.dgs.dgs.security.UsuarioDAOImp" /> -->
 	<bean class="gob.dgs.dgs.security.PerfilDAOImp" />

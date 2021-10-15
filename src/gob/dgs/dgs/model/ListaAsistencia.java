@@ -13,6 +13,7 @@ public class ListaAsistencia {
 	@Id private Long id;
 	@Index private String proyecto;
 	private Date fecha;
+	private String hora;
 	private List<Persona> asistentes;
 	
 	public Long getId() {
@@ -38,6 +39,12 @@ public class ListaAsistencia {
 	}
 	public void setAsistentes(List<Persona> asistentes) {
 		this.asistentes = asistentes;
+	}
+	public String getHora() {
+		return hora;
+	}
+	public void setHora(String hora) {
+		this.hora = hora;
 	}
 	
 	

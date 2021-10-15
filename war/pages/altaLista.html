@@ -1,24 +1,12 @@
-
-<div class="col-sm-8 text-left">
-	<div id="page-wrapper">
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 class="page-header">Alta Lista de Asistencia</h1>
-			</div>
-			<!-- /.col-lg-12 -->
-		</div>
-		<!-- /.row -->
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">Registro de Listas de Asistencia</div>
-					<!-- /.panel-heading -->
-					<div class="panel-body">
-						<form id="forma" name="myForm">
-						
-							<div class="col-md-6">
+<div class="container col-sm-10" style="font-size: 11px">
+	<div class="row">
+		<div class="col-md-9">
+			
+				<form class="form-inline" style="text-align: left">
+					<div class="row">
+						<div class="col-md-7">
 								*Proyecto:<br> <select class="form-control"
-									ng-model="newLista.proyecto" ng-required="true">
+									ng-model="Lista.proyecto" ng-required="true">
 									<option>Servicio de arrendamiento y bienes inform&aacute;ticos</option>
 									<option>Canastas Alimentarias</option>
 									<option>Traslado y manejo de residuos s&oacute;lidos</option>			
@@ -29,56 +17,97 @@
 									<option>Productos alimenticios para personas</option>	
 									<option>Procedimientos Adquisitivos</option>	
 														
-								</select><br>
-							</div>
-							
-							 <div class="col-md-6">
-                          Fecha:<br>
-                          <input type="date" class="form-control" ng-model="newLista.fecha">
-                          <br>
-                          </div>
-      <!--             ---------------------------------------               --> 
-<!--                           <div class="form-group col-md-6"> -->
-<!-- 						<div class="row" style="padding-left: 60px"> -->
-<!-- 							<select class="form-control input-sm" ng-model="busquedas.tipo" style="width: inherit;"> -->
-<!-- 								<option selected>Asistentes</option> -->
-<!-- 								<option>Asistentes</option> -->
-<!-- 							</select> -->
-<!-- 						</div> -->
-<!-- 						<label for="email">Buscar:</label> <input type="text" -->
-<!-- 							class="form-control input-sm" id="buscar" -->
-<!-- 							ng-model="busquedas.buscar"> -->
-<!-- 						<button type="submit" class="btn btn-primary" -->
-<!-- 							ng-click="buscar(busquedas)" ng-disabled="botonBuscar"> -->
-<!-- 							<span class="glyphicon glyphicon-search"></span> -->
-<!-- 						</button> -->
-<!-- 						<button type="submit" class="btn btn-primary" -->
-<!-- 							data-toggle="tooltip" title="Mostrar Todos" -->
-<!-- 							ng-click="cargarPagina(1)"> -->
-<!-- 							<span class="glyphicon glyphicon-eye-open"></span> -->
-<!-- 						</button> -->
-<!-- 					</div> -->
-				</form>
-			</div>
-			
-			<hr>
-			<div class="row"></div>
-				<div class="row">
-<!--             ---------------------------------------               -->
-                          
-							<div class="col-md-12">
-								<button type="submit" value="Registrar" class="btn btn-primary"
-									ng-click="myForm.$valid && registraLista(newLista)">Registrar</button>
-							</div>
-						</form>
-						<!-- /.table-responsive -->
+								</select>
+						</div>							
+							 <div class="col-md-2" >						 
+                          		Fecha:<br>
+                          		<input type="date" class="form-control" ng-model="Lista.fecha">                          	
+                         	 </div>
+                           <div class="col-sm-3">
+                          		Hora:<br>
+                         		<input class="form-control" ng-model="Lista.hora">                          		
+                          </div><br><br>
+                     </div>     
+                <div class="row">     
+					<div class="col-md-8">
+						
+						<label for="email">Buscar Persona:</label> <input type="text"
+							class="form-control input-sm" id="buscar"
+							ng-model="busquedas.buscar">
+						<button type="submit" class="btn btn-primary"
+							ng-click="buscar(busquedas)" ng-disabled="botonBuscar">
+							<span class="glyphicon glyphicon-search"></span>
+						</button>
+						<button type="submit" class="btn btn-primary"
+							data-toggle="tooltip" title="Mostrar Todos"
+							ng-click="cargarPagina(1)">
+							<span class="glyphicon glyphicon-eye-open"></span>
+						</button>
 					</div>
-					<!-- /.panel-body -->
 				</div>
-				<!-- /.panel -->
+				</form>
+<!-- 			</div> -->
+			<div class="row">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Cargo</th>
+							<th>T&iacute;tulo</th>
+							<th>
+							<th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="persona in personas">
+							<td>{{persona.nombre}}</td>
+							<td>{{persona.cargo}}</td>
+							<td>{{persona.titulo}}</td>
+							
+							<td>
+							<td>
+								<button type="button" class="btn btn-default btn-sm"
+									ng-click="agregarAsistente(persona)">
+									<span class="glyphicon glyphicon-plus"></span>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div ng-show="todos">
+					<ul class="pagination .pagination-sm">
+						<li ng-repeat="abc in paginas" id="{{'pag'+abc}}"
+							ng-click="cargarPagina(abc)"><a>{{abc}}</a></li>
+
+					</ul>
+				</div>
 			</div>
-			<!-- /.col-lg-12 -->
+			<hr>
+			
+	</div>
+		
+
+		<div class="col-md-3">
+			<div class="well well-sm">
+				<h4>Lista de Asistencia</h4>
+				<table class="table table-stripped">
+					<tbody>
+											
+						<tr ng-repeat="asistente in Lista.asistentes">
+							<td>{{asistente.nombre}}</td>
+							<td>{{asistente.cargo}}</td>
+							<td>{{asistente.titulo}}</td>
+							<td><a ng-click="quitaPersona($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+						</tr>
+						
+						
+					</tbody>
+				</table>
+				
+				<button class="btn btn-small btn-primary" ng-click="registraLista(Lista)">Guardar Lista</button>
+			
+			</div>
+		</div>
 		</div>
 	</div>
-</div ng-view>
-
+</div>

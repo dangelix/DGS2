@@ -2,21 +2,22 @@ package gob.dgs.dgs.dao.imp;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import gob.dgs.dgs.dao.ListaAsistenciaDao;
-import gob.dgs.dgs.model.ListaAsistencia;
+import gob.dgs.dgs.dao.RequerimientoDao;
 
-public class ListaAsistenciaDaoImp implements ListaAsistenciaDao {
+import gob.dgs.dgs.model.Requerimiento;
+
+public class RequerimientoDaoImpl implements RequerimientoDao{
+
 	@Override
-	public void guardar(ListaAsistencia c) {
+	public void guardar(Requerimiento c) {
 		ofy().save().entity(c).now();
 	}
 
 	@Override
-	public ListaAsistencia cargar(Long id) {
-		return ofy().load().type(ListaAsistencia.class).id(id).now();
+	public Requerimiento cargar(Long id) {
+		return ofy().load().type(Requerimiento.class).id(id).now();
 	}
 
 //	@Override
@@ -33,24 +34,24 @@ public class ListaAsistenciaDaoImp implements ListaAsistenciaDao {
 //	}
 
 	@Override
-	public List<ListaAsistencia> todos(int page) {
-		return ofy().load().type(ListaAsistencia.class).offset((page-1)*25).limit(25).list();
+	public List<Requerimiento> todos(int page) {
+		return ofy().load().type(Requerimiento.class).offset((page-1)*25).limit(25).list();
 	}
 
 	@Override
 	public int pages() {
-		int total= ofy().load().type(ListaAsistencia.class).count();
+		int total= ofy().load().type(Requerimiento.class).count();
 		return ((total-1)/25)+1;
 	}
 
 	@Override
-	public List<ListaAsistencia> todos() {
+	public List<Requerimiento> todos() {
 		// TODO Auto-generated method stub
-		return ofy().load().type(ListaAsistencia.class).list();
+		return ofy().load().type(Requerimiento.class).list();
 	}
 	
 	@Override
-	public void delete(ListaAsistencia c) {
+	public void delete(Requerimiento c) {
 		// TODO Auto-generated method stub
 		ofy().delete().entity(c).now();
 	}
