@@ -21,7 +21,8 @@ app.config([ '$routeProvider', function($routeProvider) {
 		controller : "PersonasEditController"
 	});
 	
-		$routeProvider.when('/listas', {
+	
+	$routeProvider.when('/listas', {
 		templateUrl : "pages/listas.html",
 		controller : "ListasController"
 	});
@@ -35,6 +36,113 @@ app.config([ '$routeProvider', function($routeProvider) {
 		templateUrl : "pages/listasEdita.html",
 		controller : "ListasEditController"
 	});
+	
+	//////////////////////////////////////
+		$routeProvider.when('/proyectos', {
+		templateUrl : "pages/proyectos.html",
+		controller : "ProyectosController"
+	});
+
+	$routeProvider.when('/altaProyecto', {
+		templateUrl : "pages/altaProyecto.html",
+		controller : "ProyectosController"
+	});
+	
+	$routeProvider.when('/proyectos/edit/:id', {
+		templateUrl : "pages/proyectosEdita.html",
+		controller : "ProyectosEditController"
+	});
+	
+	/////////////////////////////////////
+	
+	$routeProvider.when('/requerimientos', {
+		templateUrl : "pages/requerimientos.html",
+		controller : "RequerimientosController"
+	});
+
+	$routeProvider.when('/requerimientos/byProyecto/:id/:pag', {
+		templateUrl : "pages/requerimientos.html",
+		controller : "RequerimientosController"
+	});
+	$routeProvider.when('/altaRequerimiento', {
+		templateUrl : "pages/altaRequerimiento.html",
+		controller : "RequerimientosController"
+	});
+	$routeProvider.when('/altaRequerimiento/:id', {
+		templateUrl : "pages/altaRequerimiento.html",
+		controller : "RequerimientosController"
+	});
+	
+	
+	$routeProvider.when('/requerimientos/edit/:id', {
+		templateUrl : "pages/requerimientosEdita.html",
+		controller : "RequerimientosEditController"
+	});
+	
+	/////////////////////////////////////
+	
+	$routeProvider.when('/entregables', {
+		templateUrl : "pages/entregables.html",
+		controller : "EntregablesController"
+	});
+
+	$routeProvider.when('/entregables/byProyecto/:id/:pag', {
+		templateUrl : "pages/entregables.html",
+		controller : "EntregablesController"
+	});
+	$routeProvider.when('/altaEntregable', {
+		templateUrl : "pages/altaEntregable.html",
+		controller : "EntregablesController"
+	});
+	$routeProvider.when('/altaEntregable/:id', {
+		templateUrl : "pages/altaEntregable.html",
+		controller : "EntregablesController"
+	});
+	
+	$routeProvider.when('/entregables/edit/:id', {
+		templateUrl : "pages/entregablesEdita.html",
+		controller : "EntregablesEditController"
+	});
+	
+	/////////////////////////////////////
+	
+	$routeProvider.when('/cumplimientos', {
+		templateUrl : "pages/cumplimientos.html",
+		controller : "CumplimientosController"
+	});
+	
+	$routeProvider.when('/cumFull', {
+		templateUrl : "pages/cumFull.html",
+		controller : "CumplimientosFullController"
+	});
+
+	$routeProvider.when('/cumplimientos/byProyecto/:id/:pag', {
+		templateUrl : "pages/cumplimientos.html",
+		controller : "CumplimientosController"
+	});
+	$routeProvider.when('/altaCumplimiento', {
+		templateUrl : "pages/altaCumplimiento.html",
+		controller : "CumplimientosController"
+	});
+	$routeProvider.when('/altaCumplimiento/:id', {
+		templateUrl : "pages/altaCumplimiento.html",
+		controller : "CumplimientoController"
+	});
+	
+	$routeProvider.when('/cumplimientos/edit/:id', {
+		templateUrl : "pages/cumplimientosEdita.html",
+		controller : "CumplimientosEditController"
+	});
+	
+	/////////////////////////////////////
+	
+	
+	$routeProvider.when('/requerimientos/edit/:id', {
+		templateUrl : "pages/requerimientosEdita.html",
+		controller : "RequerimientosEditController"
+	});
+	
+	/////////////////////////////////////
 	
 	$routeProvider.when('/login' ,  {
 		templateUrl : "pages/login.html" ,

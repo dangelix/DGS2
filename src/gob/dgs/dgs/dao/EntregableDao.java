@@ -16,6 +16,10 @@ public interface EntregableDao {
 	
 	public List<Entregable> todos();
 	
+	public List<Entregable> byProyecto(String proyecto);
+	
+	public List<Entregable> byProyEstatus(String proyecto, String estatus);
+	
 	public int pages();
 	
 	public void delete(Entregable c);

@@ -10,13 +10,18 @@ import com.googlecode.objectify.annotation.Index;
 public class Entregable {
 
 	@Id private Long id;
-	@Index private Long idProyecto;
+	@Index private String proyecto;
 	@Index private String titulo;
 	private String subtitulo;
-	private String estatus;
+	@Index private String estatus;
+	private String avances;
+	private String actividades;
+	private String constancias;
+	
 	private Date fechaEntrega;
 	private Date fechaActualizacion;
 	private String user;
+	private Double progreso;
 	public Long getId() {
 		return id;
 	}
@@ -59,12 +64,39 @@ public class Entregable {
 	public void setUser(String user) {
 		this.user = user;
 	}
-	public Long getIdProyecto() {
-		return idProyecto;
+
+
+	public String getProyecto() {
+		return proyecto;
 	}
-	public void setIdProyecto(Long idProyecto) {
-		this.idProyecto = idProyecto;
+	public void setProyecto(String proyecto) {
+		this.proyecto = proyecto;
 	}
+	public Double getProgreso() {
+		return progreso;
+	}
+	public void setProgreso(Double progreso) {
+		this.progreso = progreso;
+	}
+	public String getAvances() {
+		return avances;
+	}
+	public void setAvances(String avances) {
+		this.avances = avances;
+	}
+	public String getActividades() {
+		return actividades;
+	}
+	public void setActividades(String actividades) {
+		this.actividades = actividades;
+	}
+	public String getConstancias() {
+		return constancias;
+	}
+	public void setConstancias(String constancias) {
+		this.constancias = constancias;
+	}
+	
 	
 	
 }

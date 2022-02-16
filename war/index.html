@@ -22,6 +22,10 @@
 	<script src="js/controllers/controller.js"></script>
 	<script src="js/controllers/personasController.js"></script>
 	<script src="js/controllers/listasController.js"></script>
+		<script src="js/controllers/proyectosController.js"></script>
+		<script src="js/controllers/requerimientosController.js"></script>
+		<script src="js/controllers/entregablesController.js"></script>
+		<script src="js/controllers/cumplimientosController.js"></script>
 	<script src="js/controllers/sesion.js"></script>
 	<script src="js/controllers/usuario.js"></script>
 	<script src="js/controllers/perfil.js"></script>
@@ -44,12 +48,7 @@
       <div class="navbar-form navbar-left">
        <h4>Dirección General de seguimiento</h4>
      </div>
-<!--      <form action="" class="navbar-form navbar-center" role="search"> -->
-<!--       <button class="glyphicon glyphicon-user form-control navbar-form navbar-right"> Bienvenido ADMINISTRADOR</button>    -->
-<!--     </form>       -->
-<!-- <div class="navbar-form navbar-right" ng-show="authenticated"> -->
-<!-- 	<a href="#/alertas" style="color:#FFFFFF">Alertas <span class="label label-warning">{{numAlertas}}</span></a> -->
-<!-- </div> -->
+
   </div>
 </section>
 
@@ -58,7 +57,7 @@
     <div class="col-sm-2 sidebar text-center" role="navigation" ng-show="authenticated">
      <div class="sidebar-nav navbar-collapse">                   
       <ul class="nav" id="side-menu">                        
-<!--         <li><a href="#/ventas"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-shopping-cart col-md-2 text-left"></i>Nueva Venta</a></li> -->
+
         <li class="dropdown"><a data-toggle="collapse" href="#collapse1"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-user col-md-2 text-left"></i> Usuarios<span class="caret"></span></a>
           <div id="collapse1" class="panel-collapse collapse">
           	<ul class="list-group">
@@ -72,49 +71,58 @@
           <li class="dropdown"><a data-toggle="collapse" href="#collapse2"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-user col-md-2 text-left"></i>Personas<span class="caret"></span></a>
         	  <div id="collapse2" class="panel-collapse collapse">
           	<ul class="list-group">
-<!--             	<li class="list-group-item"><a href="#/altaPersona">Alta Persona</a></li>            	 -->
             	<li class="list-group-item"><a href="#/personas">Lista de personas</a></li>            	
           	</ul>
           	 	
           </div>
          </li>
-          <li class="dropdown"><a data-toggle="collapse" href="#collapse3"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-user col-md-2 text-left"></i>Formatos Oficiales<span class="caret"></span></a>
+          <li class="dropdown"><a data-toggle="collapse" href="#collapse3"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-modal-window col-md-2 text-left"></i>Formatos oficiales<span class="caret"></span></a>
         	  <div id="collapse3" class="panel-collapse collapse">
           	<ul class="list-group">
-<!--             	<li class="list-group-item"><a href="#/altaPersona">Alta Persona</a></li>            	 -->
             	<li class="list-group-item"><a href="#/listas">Lista de Asistencia</a></li>            	
           	</ul>
           	 	
           </div>
          </li>
-<!--         <li><a href="#/proveedores"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-user col-md-2 text-left"></i> Provedores</a></li> -->
-<!--         <li><a href="#/herramientas"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-wrench col-md-2 text-left"></i> Materiales</a></li> -->
-<!--         <li><a href="#/tornillos"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-compressed col-md-2 text-left"></i> Tornillos</a></li> -->
-        
-<!--          <li  class="dropdown"><a data-toggle="collapse" href="#collapse2"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-shopping-cart col-md-2 text-left"></i> Ventas<span class="caret"></span></a> -->
-<!--          	<div id="collapse2" class="panel-collapse collapse"> -->
-<!--           	<ul class="list-group"> -->
-<!--             	<li class="list-group-item"><a href="#/ventas">Nueva Venta</a></li> -->
-<!--             	<li class="list-group-item"><a href="#/ventasList">Historial de Ventas</a></li>            	 -->
-<!--           	</ul> -->
-<!--           </div> -->
-<!--          </li> -->
-         
-<!--          glyphicon glyphicon-cog -->
+           <li class="dropdown"><a data-toggle="collapse" href="#collapse4"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-book col-md-2 text-left"></i>Libros Blancos<span class="caret"></span></a>
+        	  <div id="collapse4" class="panel-collapse collapse">
+          	<ul class="list-group">
 
-<!--          <li  class="dropdown"><a data-toggle="collapse" href="#collapse3"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-cog col-md-2 text-left"></i> Ajustes<span class="caret"></span></a> -->
-<!--          	<div id="collapse3" class="panel-collapse collapse"> -->
-<!--           	<ul class="list-group"> -->
-<!--             	<li class="list-group-item"><a href="#/datosFacturacion"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-list col-md-2 text-left"></i> Datos Emisor</a></li> -->
-<!--             	<li class="list-group-item"><a href="#/formula">F&oacute;rmulas</a></li>            	 -->
-<!--           	</ul> -->
-<!--           </div> -->
-<!--          </li> -->
-<!--          <li><a href="#/datosFacturacion"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-list col-md-2 text-left"></i> Datos Emisor</a></li> -->
-<!--         <li ><a href="#/ventas"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-shopping-cart col-md-2 text-left"></i> Ventas</a></li> -->
-        <!-- <li><a href="almacen.html"><i class="fa fa-dashboard fa-fw glyphicon glyphicon glyphicon-th-list col-md-2 text-left"></i> Almacen</a></li>-->
-        <!--<li><a href="ventas.html"><i class="fa fa-dashboard fa-fw glyphicon glyphicon glyphicon-usd col-md-2 text-left"></i> Ventas</a></li>-->
-        <li><a href="" ng-click="CerrarSesion()"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-off col-md-2 text-left"></i> Cerrar Sesion</a></li>
+            	<li class="list-group-item"><a href="#/proyectos">Segunda etapa</a></li> 
+<!--             	<li class="list-group-item"><a href="#/requerimientos">Requerimientos</a></li>            	 -->
+          	</ul>
+          	 	
+          </div>
+         </li>
+           <li class="dropdown"><a data-toggle="collapse" href="#collapse5"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-list col-md-2 text-left"></i>Requerimientos<span class="caret"></span></a>
+        	  <div id="collapse5" class="panel-collapse collapse">
+          	<ul class="list-group">
+            	<li class="list-group-item"><a href="#/requerimientos">Lista de requerimientos</a></li>            	
+          	</ul>
+          	 	
+          </div>
+         </li>
+            <li class="dropdown"><a data-toggle="collapse" href="#collapse6"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-saved col-md-2 text-left"></i>Entregables<span class="caret"></span></a>
+        	  <div id="collapse6" class="panel-collapse collapse">
+          	<ul class="list-group">
+            	<li class="list-group-item"><a href="#/entregables">Lista de entregables</a></li>            	
+          	</ul>
+          	 	
+          </div>
+         </li>
+            <li class="dropdown"><a data-toggle="collapse" href="#collapse7"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-list-alt col-md-2 text-left"></i>Cuadro de cumplimiento<span class="caret"></span></a>
+        	  <div id="collapse7" class="panel-collapse collapse">
+          	<ul class="list-group">           	
+            	<li class="list-group-item"><a href="#/cumFull">Full Service</a></li>
+            	<li class="list-group-item"><a href="#/cumpSicontrol">SiControl</a></li>
+            	<li class="list-group-item"><a href="#/cumVazquez">V&aacute;zquez Nava</a></li>
+            		<li class="list-group-item"><a href="#/cumplimientos">Completo</a></li>            	
+          	</ul>
+          	 	
+          </div>
+         </li>
+         
+        <li><a href="" ng-click="CerrarSesion()"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-off col-md-2 text-left"></i> Cerrar Sesión</a></li>
       </ul>
     </div>
   </div>

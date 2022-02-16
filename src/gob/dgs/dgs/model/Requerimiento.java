@@ -10,7 +10,8 @@ import com.googlecode.objectify.annotation.Index;
 public class Requerimiento {
 
 	@Id private Long id;
-	@Index private Long idProyecto;
+	@Index private String etapa;
+	@Index private String proyecto;
 	@Index private String titulo;
 	private String subtitulo;
 	private String anio17;
@@ -20,6 +21,10 @@ public class Requerimiento {
 	private String anio21;
 	private String anio22;
 	private String anio23;
+	@Index private String estatus;
+	@Index private Double progreso;
+	@Index private Date fechaSolicitud;
+	private Date fechaEntrega;
 	private Date fechaActualizacion;
 	private String user;
 	public Long getId() {
@@ -94,11 +99,42 @@ public class Requerimiento {
 	public void setUser(String user) {
 		this.user = user;
 	}
-	public Long getIdProyecto() {
-		return idProyecto;
+	
+	public String getEstatus() {
+		return estatus;
 	}
-	public void setIdProyecto(Long idProyecto) {
-		this.idProyecto = idProyecto;
+	public void setEstatus(String estatus) {
+		this.estatus = estatus;
+	}
+	public Date getFechaSolicitud() {
+		return fechaSolicitud;
+	}
+	public void setFechaSolicitud(Date fechaSolicitud) {
+		this.fechaSolicitud = fechaSolicitud;
+	}
+	public Date getFechaEntrega() {
+		return fechaEntrega;
+	}
+	public void setFechaEntrega(Date fechaEntrega) {
+		this.fechaEntrega = fechaEntrega;
+	}
+	public String getProyecto() {
+		return proyecto;
+	}
+	public void setProyecto(String proyecto) {
+		this.proyecto = proyecto;
+	}
+	public Double getProgreso() {
+		return progreso;
+	}
+	public void setProgreso(Double progreso) {
+		this.progreso = progreso;
+	}
+	public String getEtapa() {
+		return etapa;
+	}
+	public void setEtapa(String etapa) {
+		this.etapa = etapa;
 	}
 	
 	

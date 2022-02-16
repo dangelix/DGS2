@@ -100,5 +100,20 @@ public class CumplimientoController {
 		rs.getWriter().print(cumplidao.pages());
 	}
 	
+	@RequestMapping(value = {
+	"/byProveedor/{proveedor}" }, method = RequestMethod.GET, produces = "application/json")
+	public void pages(HttpServletRequest re, HttpServletResponse rs, @PathVariable String proveedor) throws IOException{
+		AsignadorDeCharset.asignar(re, rs);
+		System.out.println("prov:"+proveedor);
+		
+		if(Util.verificarsesion(re)){                 //     Vázquez Nava Consultores y Abogados, S. C.
+			List<Cumplimiento> lista= cumplidao.byProveedor(proveedor);
+			rs.getWriter().println(JsonConvertidor.toJson(lista)); 
+			System.out.println("lista:"+lista);
+			}else{
+				rs.sendError(403);
+			}
+	}
+	
 		
 }

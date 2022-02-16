@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import gob.dgs.dgs.dao.PersonaDAO;
 import gob.dgs.dgs.dao.ProyectoDao;
+import gob.dgs.dgs.model.ListaAsistencia;
 import gob.dgs.dgs.model.Persona;
 import gob.dgs.dgs.model.Proyecto;
 import gob.dgs.dgs.security.PerfilDAO;
@@ -88,6 +89,7 @@ public class ProyectoController {
 	"/findFull" }, method = RequestMethod.GET, produces = "application/json")
 	public void todos(HttpServletRequest re, HttpServletResponse rs) throws IOException{
 		AsignadorDeCharset.asignar(re, rs);
+		System.out.println("ssssi");
 		if(Util.verificarsesion(re)){
 		List<Proyecto> lista= proyectodao.todos();
 		rs.getWriter().println(JsonConvertidor.toJson(lista));
@@ -101,6 +103,20 @@ public class ProyectoController {
 	public void pages(HttpServletRequest re, HttpServletResponse rs) throws IOException{
 		AsignadorDeCharset.asignar(re, rs);
 		rs.getWriter().print(proyectodao.pages());
+	}
+	
+	@RequestMapping(value = {"/delete/" }, method = RequestMethod.POST, produces = "application/json")
+	public void delete(HttpServletRequest re, HttpServletResponse rs, @RequestBody String json ) throws IOException{
+		AsignadorDeCharset.asignar(re, rs);
+	//	System.out.println("id"+id);
+		Proyecto c= (Proyecto) JsonConvertidor.fromJson(json, Proyecto.class);
+		//	if(Util.verificarPermiso(re, usuariodao, perfildao, 11)){
+		//Proyecto c=proyectodao.cargar(id);
+		proyectodao.delete(c);
+		rs.getWriter().println(JsonConvertidor.toJson(c));
+//		}else{
+//			rs.sendError(403);
+//		}
 	}
 	
 		

@@ -55,4 +55,9 @@ public class CumplimientoDaoImpl implements CumplimientoDao{
 		ofy().delete().entity(c).now();
 	}
 
+	@Override
+	public List<Cumplimiento> byProveedor(String proveedor) {
+		// TODO Auto-generated method stub
+		return ofy().load().type(Cumplimiento.class).filter("proveedor",proveedor).list();
+	}
 }

@@ -18,5 +18,7 @@ public interface CumplimientoDao {
 	public int pages();
 	
 	public void delete(Cumplimiento c);
+	
+	public List<Cumplimiento> byProveedor(String proveedor);
 
 }

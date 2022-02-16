@@ -51,6 +51,18 @@ public class EntregableDaoImpl implements EntregableDao{
 	}
 	
 	@Override
+	public List<Entregable> byProyecto(String proyecto) {
+		// TODO Auto-generated method stub
+		return ofy().load().type(Entregable.class).filter("proyecto", proyecto).list();
+	}
+	
+	@Override
+	public List<Entregable> byProyEstatus(String proyecto, String estatus) {
+		// TODO Auto-generated method stub
+		return ofy().load().type(Entregable.class).filter("proyecto", proyecto).filter("estatus", estatus).list();
+	}
+	
+	@Override
 	public void delete(Entregable c) {
 		// TODO Auto-generated method stub
 		ofy().delete().entity(c).now();

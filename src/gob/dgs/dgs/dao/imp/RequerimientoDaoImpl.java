@@ -37,6 +37,22 @@ public class RequerimientoDaoImpl implements RequerimientoDao{
 	public List<Requerimiento> todos(int page) {
 		return ofy().load().type(Requerimiento.class).offset((page-1)*25).limit(25).list();
 	}
+	
+
+	@Override
+	public List<Requerimiento> byProyectoPag(String proyecto,int page) {
+		return ofy().load().type(Requerimiento.class).filter("proyecto", proyecto).offset((page-1)*25).limit(25).list();
+	}
+	
+	@Override
+	public List<Requerimiento> byProyecto(String proyecto) {
+		return ofy().load().type(Requerimiento.class).filter("proyecto", proyecto).order("-fechaSolicitud").list();
+	}
+	
+	@Override
+	public List<Requerimiento> byProyectoEtapa(String proyecto, String etapa) {
+		return ofy().load().type(Requerimiento.class).filter("proyecto", proyecto).filter("etapa", etapa).order("-fechaSolicitud").list();
+	}
 
 	@Override
 	public int pages() {

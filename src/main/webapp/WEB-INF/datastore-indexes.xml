@@ -1,3 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- Indices written at Fri, 29 Oct 2021 12:11:40 CDT -->
+
 <datastore-indexes autoGenerate="true">
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Requerimiento" ancestor="false" source="auto">
+        <property name="proyecto" direction="asc"/>
+        <property name="fechaSolicitud" direction="desc"/>
+    </datastore-index>
+
 </datastore-indexes>

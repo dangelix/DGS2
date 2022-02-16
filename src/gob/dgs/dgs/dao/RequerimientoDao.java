@@ -15,6 +15,12 @@ import gob.dgs.dgs.model.Requerimiento;
 	
 	public List<Requerimiento> todos(int page);
 	
+	public List<Requerimiento> byProyectoPag(String proyecto,int page);
+	
+	public List<Requerimiento> byProyecto(String proyecto);
+	
+	public List<Requerimiento> byProyectoEtapa(String proyecto, String etapa);
+	
 	public List<Requerimiento> todos();
 	
 	public int pages();
