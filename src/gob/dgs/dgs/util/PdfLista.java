@@ -186,7 +186,7 @@ private void construirPieDePagina(ListaAsistencia l,Document document) throws Do
 		public String dameFecha(Date fecha) {
 			String dia= String.valueOf(fecha.getDay());
 			 String mes= String.valueOf(fecha.getMonth());
-			 String year=fecha.toLocaleString().substring(5, 9);
+			 String year=fecha.toLocaleString().substring(6, 10);
 			 System.out.println("kjhgh"+fecha.toLocaleString());
 			 switch(mes) {
 			 case "0":mes="Enero "; break;
