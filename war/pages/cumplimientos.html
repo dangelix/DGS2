@@ -1,0 +1,275 @@
+<div class="col-sm-10 text-left">
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Cuadro de cumplimiento
+				
+				</h1>
+				
+			</div>
+
+			
+
+      		</div>
+		
+			<div class="col-md-7"><label for="email">Filtro por Proveedor:</label> </div>
+		
+			
+		<div class="col-md-6"> 
+							<select class="form-control" ng-model="Cumplimiento.proveedor" ng-required="true">
+									<option>V&aacute;zquez Nava Consultores y Abogados, S. C.. </option>
+									<option>SIControl, S. C.. </option>
+									<option>Full Service de M&eacute;xico, S. A. de C. V.. </option>			
+								
+														
+								</select>
+							</div>							
+			<div class="col-md-1"> 
+				<p align="left">
+					<button class="btn btn-small"  title="Buscar" ng-click="cargaCumProv(Cumplimiento.proveedor)">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					</button> 	
+				</p>	
+		    </div>               	
+        
+
+		
+	</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Consulta General del cuadro de cumplimiento
+<!-- 						<p align="center"> -->
+						<button type="submit" value="enviar" title="Registrar cumplimiento de LB" class="btn btn-primary"
+							onclick="location='#/altaCumplimiento'">Registrar cumplimiento de LB</button>
+<!-- 					</p> -->
+						</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+						<table width="100%"
+							class="table table-striped table-bordered table-hover"
+							id="dataTables-example">
+							<thead>
+								<tr>
+<!-- 									<th>Numero de Persona</th> -->
+									<th>Nombre del Libro Blanco</th>									
+									<th>Proveedor</th>
+<!-- 									<th>Subtitulo</th> -->
+<!-- 									<th>FechaSolicitud</th> -->
+									<th title="An&aacute;lisis de la normatividad aplicable para el desarrollo de los trabajos.">1</th>
+									<th title="Investigaci&oacute;n de normatividad aplicable y fuentes potenciales de informaci&oacute;n">2</th>
+									<th title="Observaciones del estudio preliminar">Obs</th>
+									<th title="Reuni&oacute;n inicial para dar a conocer el programa de trabajo, la metodolog&iacute;a y al equipo consultor.">3</th>
+									<th title="Presentaci&oacute;n del Programa General de Trabajo">4</th>		
+									<th title="Elaboraci&oacute;n del plan de trabajo, presentaci&oacute;n de inducci&oacute;n y metodolog&iacute;a, lista de asistencia">5</th>	
+									<th title="Observaciones de Inducci&oacute;n">Obs</th>
+									<th title="Designaci&oacute;n de enlaces de parte del Prestador de servicios externo para el desarrollo de los trabajos.">6</th>
+									<th title="Observaciones de Enlaces Institucionales">Obs</th>		
+									<th title="Diseño del gui&oacute;n de contenido preliminar del Libro Blanco a documentarse, especificando cap&iacute;tulos, subcap&iacute;tulos y apartados espec&iacute;ficos, de conformidad con la normatividad que en su caso le sea aplicable y atendiendo la naturaleza, duraci&oacute;n, caracter&iacute;sticas y alcance del mismo, el cual fungir&aacute; como directriz para la recopilaci&oacute;n de informaci&oacute;n.">7</th>	
+									<th title="Definici&oacute;n de informaci&oacute;n a requerir a la unidad administrativa">8</th>
+									<th title="Solicitud de informaci&oacute;n  No. 1">9</th>		
+									<th title="Solicitud de informaci&oacute;n numerales I. Presentaci&oacute;n y  II. Fundamento legal  y objetivo del Libro Blanco.">10</th>
+									<th title="Solicitud de informaci&oacute;n numeral III. Antecedentes.">11</th>
+									<th title="Solicitud de informaci&oacute;n numeral IV. Marco normativo aplicable">12</th>		
+									<th title="Solicitud de informaci&oacute;n numeral V. Vinculaci&oacute;n del programa, proyecto o pol&iacute;tica p&uacute;blica con el Plan de Desarrollo del Estado de M&eacute;xico.">13</th>
+									<th title="Solicitud de Informaci&oacute;n numerales VI.  S&iacute;ntesis ejecutiva del programa o proyecto y VII. Acciones realizadas. Del 23 al 27 de agosto de 2021.">14</th>
+									<th title="Solicitud de las relaciones que identifiquen el estatus de seguimiento a las observaciones determinadas por los &oacute;rganos fiscalizadores internos y externos.  Numeral VIII. Seguimiento y control. Del 18 al 29 de octubre 2021.">15</th>		
+									<th title="Solicitud del documento que narre el avance y cumplimiento de las metas y objetivos del programa Compras Covid-19 en los ejercicio 2020 y 2021.  Numeral IX. Resultados y beneficios alcanzados. Del 1 al 5 de noviembre de 2021">16</th>	
+									<th title="Solicitud de los  Numerales X.  Resumen Ejecutivo del Informe final de la persona responsable de la ejecuci&oacute;n del programa ejercicio 2020 y 2021 y XI. Anexos. Del 1 al 5 de noviembre 2021.">17</th>	
+									<th title="Observaciones de Requerimientos de informaci&oacute;n">Obs</th>
+									<th title="El prestador de servicios externo sostendr&aacute; reuniones y/o entrevistas con el enlace designado, con la finalidad de recopilar la documentaci&oacute;n, para lo cual, el Despacho realizar&aacute; listados de informaci&oacute;n necesaria para la integraci&oacute;n del Libro Blanco de conformidad con los guiones preliminares. Cabe señalar que conforme avance la revisi&oacute;n, se generar&aacute;n nuevos requerimientos.  Por su parte, los enlaces deber&aacute;n proporcionar, al grupo consultor, la totalidad de la documentaci&oacute;n requerida en el menor tiempo posible ya sea f&iacute;sica o digital. Cabe señalar que el Despacho recibir&aacute; y examinar&aacute; documentos que re&uacute;nan las condiciones de oficialidad, as&iacute; como los dem&aacute;s elementos de forma necesarios, tales como que sean legibles, sean las versiones definitivas y est&eacute;n completos.">18</th>
+									<th title="El prestador de servicios externo celebra reuniones o entrevistas de trabajo con el personal designado con el objeto de solicitar informaci&oacute;n adicional o complementaria, as&iacute; como informar de posibles “&aacute;reas de oportunidad” detectadas durante la revisi&oacute;n.">19</th>		
+									<th title="Reuniones de trabajo">20</th>	
+									<th title="Entrevista a los servidores p&uacute;blicos designados. Del 19 al 23 de julio 2021.">21</th>
+									<th title="Entrevista a los servidores p&uacute;blicos designados. Del 2 al 6 de agosto  de 2021.">22</th>		
+									<th title="Entrevista a los servidores p&uacute;blicos designados. Del 16 al 20  de agosto  de 2021.">23</th>
+									<th title="Entrevista a los servidores p&uacute;blicos designados. Del 30 de agosto al 03 de septiembre de 2021.">24</th>
+									<th title="Entrevista a los servidores p&uacute;blicos designados. Del 13 al 17 de  septiembre de 2021.">25</th>		
+									<th title="Entrevista a los servidores p&uacute;blicos designados. Del 27 de septiembre al 1 de octubre de 2021.">26</th>
+									<th title="Entrevista a los servidores p&uacute;blicos designados. Del 11 de octubre al 26 de noviembre de 2021.">27</th>
+									<th title="Entrevista a los servidores p&uacute;blicos designados. Del 6 al 10 de diciembre de  2021.">28</th>		
+									<th title="Entrevista a los servidores p&uacute;blicos designados. Del 20 al 24 de diciembre de  2021.">29</th>
+									<th title="El Prestador de servicios externo recepciona la informaci&oacute;n solicitada.">30</th>		
+									<th title="El Prestador de servicios externo digitaliza la informaci&oacute;n entregada, en su caso.">31</th>	
+									<th title="An&aacute;lisis jur&iacute;dico – normativo de la documentaci&oacute;n soporte que ser&aacute; integrada al Libro Blanco, con la finalidad de verificar su sustento legal, financiero y de gesti&oacute;n sustantiva y adjetiva, conforme a las disposiciones aplicables. Principalmente, se verificar&aacute; la congruencia y consistencia de datos, fechas y cifras; se constatar&aacute; la suficiencia de la documentaci&oacute;n como sustento de la acci&oacute;n que se documenta; se verificar&aacute; la cronolog&iacute;a de las actividades desarrolladas por el programa o proyecto; y se corroborar&aacute; el cumplimiento de la normatividad aplicable a cada acci&oacute;n.">32</th>
+									<th title="Elaboraci&oacute;n de notas explicativas y  cuadros resumen en aquellos casos en que, por el volumen o complejidad de la informaci&oacute;n se considere conveniente realizar descripciones espec&iacute;ficas para dar mayor claridad y transparencia.">33</th>		
+									<th title="Redacci&oacute;n de los apartados descriptivos contenidos en el Libro Blanco (presentaci&oacute;n, antecedentes, marco normativo, s&iacute;ntesis ejecutiva, resultados y beneficios, entre otros).">34</th>
+									<th title="Solicitud y obtenci&oacute;n de soporte documental y su digitalizaci&oacute;n, en su caso">35</th>
+									<th title="Revisi&oacute;n y an&aacute;lisis de la documentaci&oacute;n presentada, considerando diseño de c&eacute;dulas, notas explicativas, cuadro resumen.">36</th>		
+									<th title="Procesar la informaci&oacute;n disponible en plataformas p&uacute;blicas de compras">37</th>
+									<th title="Versi&oacute;n preliminar del Libro Blanco aprobada por los enlaces responsables y los Titulares de los &oacute;rganos Internos de Control correspondientes, ser&aacute; remitido al Secretario T&eacute;cnico del Comit&eacute; T&eacute;cnico para la Autorizaci&oacute;n y Seguimiento de los Libros Blancos del Gobierno del Estado de M&eacute;xico, quien revisar&aacute; su correcta y oportuna integraci&oacute;n y lo informar&aacute; al Comit&eacute; T&eacute;cnico para la Autorizaci&oacute;n y Seguimiento de los Libros Blancos del Gobierno del Estado de M&eacute;xico.">38</th>
+									<th title="Apartado I del Libro Blanco">39</th>		
+									<th title="Apartado II del Libro Blanco">40</th>
+									<th title="Apartado III del Libro Blanco">41</th>		
+									<th title="Apartado IV del Libro Blanco">42</th>	
+									<th title="Apartado V del Libro Blanco">43</th>
+									<th title="Apartado VI del Libro Blanco">44</th>		
+									<th title="Apartado VII del Libro Blanco">45</th>
+									<th title="Apartado VIII del Libro Blanco">46</th>
+									<th title="Apartado IX del Libro Blanco">47</th>		
+									<th title="Apartado X del Libro Blanco">48</th>
+									<th title="Apartado XI del Libro Blanco">49</th>
+									<th title="Selecci&oacute;n de documentaci&oacute;n para su integraci&oacute;n al Libro Blanco, del 30/08/2021 al 26/11/2021">50</th>		
+									<th title="Elaboraci&oacute;n del Libro Blanco, cap&iacute;tulos I a VI, del 06/09/2021 al 26/11/2021">51</th>
+									<th title="Elaboraci&oacute;n del Libro Blanco, cap&iacute;tulos VII a XI, del 04/10/2021 al 26/11/2021">52</th>		
+									<th title="Entrega al Secretario T&eacute;cnico del Comit&eacute; T&eacute;cnico para la elaboraci&oacute;n e integraci&oacute;n de Libros Blancos del ejemplar preliminar en formato word y PDF. Del 29 de noviembre al 3 de diciembre de 2021">53</th>	
+									<th title="Consolidaci&oacute;n de la informaci&oacute;n de las distintas acciones en un &uacute;nico archivo digital, a fin de tener una fuente de datos &uacute;nica, segura, confiable y certera, que incluya un sistema inform&aacute;tico integral de gesti&oacute;n que integre una herramienta de b&uacute;squeda din&aacute;mica de informaci&oacute;n, que facilite la obtenci&oacute;n de la misma para atender de manera expedita, en su caso, los requerimientos de los diferentes &oacute;rganos de fiscalizaci&oacute;n.">54</th>
+									<th title="Diseño del Guion de Contenido definitivo de cada Libro Blanco, especificando cap&iacute;tulos, subcap&iacute;tulos y apartados espec&iacute;ficos, de conformidad con la normatividad y acciones realizadas que en su caso le sea aplicable, y atendiendo la naturaleza, duraci&oacute;n, caracter&iacute;sticas y alcance del mismo.">55</th>		
+									<th title="Informe Final y Gui&oacute;n de Contenido Definitivo de cada Libro Blanco a documentarse.">56</th>
+									<th title="Presentaci&oacute;n de cada Libro Blanco.">57</th>
+									<th title="Versi&oacute;n final del Libro Blanco">58</th>		
+									<th title="Diseño del gui&oacute;n de contenido del Libro Blanco, especificando cap&iacute;tulos, subcap&iacute;tulos y apartados espec&iacute;ficos.">59</th>
+									<th title="Estructurar la versi&oacute;n p&uacute;blica del Libro Blanco">60</th>
+									<th title="Elaboraci&oacute;n y presentaci&oacute;n de informes mensuales de avance que contendr&aacute;n: Avances en el Programa de Trabajo, Descripcion de las actividades mas importantes realizadas, Constancias de reuniones en el periodo">61</th>		
+									<th title="El prestador de servicios externo conforma y presenta el Libro Blanco para su entrega 5 ejemplares digitales y 5 ejemplares  impresos  del Libro Blanco.">62</th>
+									<th title="Elaboraci&oacute;n de informes de avances  mensuales">63</th>		
+									<th title="Entrega de ejemplares definitivos.">64</th>	
+									<th title="Primer entregable con fecha 6 de agosto 2021, del Programa General de Trabajo, calendarizaci&oacute;n de asesor&iacute;as, presentaci&oacute;n de inducci&oacute;n  y listas de asistencia del 2 de agosto del 2021">65</th>
+									<th title="Segundo entregable: Informe ejecutivo mensual del 27 al 30 de septiembre.">66</th>		
+									<th title="Informe ejecutivo mensual  al 31 de octubre 2021.">67</th>
+									<th title="Tercer entregable: Informe final de los servicios y gui&oacute;n de contenido del Libro Blanco. El 15 de diciembre de 2021.">68</th>
+									<th title="Entregable final: Cinco ejemplares impresos y la versi&oacute;n digital del Libro Blanco. El 31 de diciembre de 2021.">69</th>		
+									<th title="">70</th>
+									
+													
+									<th>Estatus General</th>
+ 									<th>Progreso</th>					 
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="Cumplimiento in Cumplimientos"
+									" class="odd gradeX">
+
+									<td>{{Cumplimiento.proyecto}}</td>
+									<td>{{Cumplimiento.proveedor}}</td>
+<!-- 									<td>{{Entregable.subtitulo}}</td>									 -->
+<!-- 									<td>{{Entregable.fechaSolicitud | date:'dd-MM-yyyy'}}</td>												 -->
+									<td>{{Cumplimiento.col1}}</td>
+									<td>{{Cumplimiento.col2}}</td>
+									<td>{{Cumplimiento.obs1}}</td>
+									<td>{{Cumplimiento.col3}}</td>
+									<td>{{Cumplimiento.col4}}</td>
+									<td>{{Cumplimiento.col5}}</td>
+									<td>{{Cumplimiento.obs2}}</td>
+									<td>{{Cumplimiento.col6}}</td>
+									<td>{{Cumplimiento.obsX}}</td>
+									<td>{{Cumplimiento.col7}}</td>
+									<td>{{Cumplimiento.col8}}</td>
+									<td>{{Cumplimiento.col9}}</td>
+									<td>{{Cumplimiento.col10}}</td>
+									<td>{{Cumplimiento.col11}}</td>
+									<td>{{Cumplimiento.col12}}</td>
+									<td>{{Cumplimiento.col13}}</td>
+									<td>{{Cumplimiento.col14}}</td>
+									<td>{{Cumplimiento.col15}}</td>
+									<td>{{Cumplimiento.col16}}</td>
+									<td>{{Cumplimiento.col17}}</td>
+									<td>{{Cumplimiento.col18}}</td>
+									<td>{{Cumplimiento.obs3}}</td>
+									<td>{{Cumplimiento.col19}}</td>
+									<td>{{Cumplimiento.col20}}</td>
+									<td>{{Cumplimiento.col21}}</td>
+									<td>{{Cumplimiento.col22}}</td>
+									<td>{{Cumplimiento.col23}}</td>
+									<td>{{Cumplimiento.col24}}</td>
+									<td>{{Cumplimiento.col25}}</td>
+									<td>{{Cumplimiento.col26}}</td>
+									<td>{{Cumplimiento.col27}}</td>
+									<td>{{Cumplimiento.col28}}</td>
+									<td>{{Cumplimiento.col29}}</td>
+									<td>{{Cumplimiento.col30}}</td>
+									<td>{{Cumplimiento.col31}}</td>
+									<td>{{Cumplimiento.col32}}</td>
+									<td>{{Cumplimiento.col33}}</td>
+									<td>{{Cumplimiento.col34}}</td>
+									<td>{{Cumplimiento.col35}}</td>
+									<td>{{Cumplimiento.col36}}</td>
+									<td>{{Cumplimiento.col37}}</td>
+									<td>{{Cumplimiento.col38}}</td>
+									<td>{{Cumplimiento.col39}}</td>
+									<td>{{Cumplimiento.col40}}</td>
+									<td>{{Cumplimiento.col41}}</td>
+									<td>{{Cumplimiento.col42}}</td>
+									<td>{{Cumplimiento.col43}}</td>
+									<td>{{Cumplimiento.col44}}</td>
+									<td>{{Cumplimiento.col45}}</td>
+									<td>{{Cumplimiento.col46}}</td>
+									<td>{{Cumplimiento.col47}}</td>
+									<td>{{Cumplimiento.col48}}</td>
+									<td>{{Cumplimiento.col49}}</td>
+									<td>{{Cumplimiento.col50}}</td>
+									<td>{{Cumplimiento.col51}}</td>
+									<td>{{Cumplimiento.col52}}</td>
+									<td>{{Cumplimiento.col53}}</td>
+									<td>{{Cumplimiento.col54}}</td>
+									<td>{{Cumplimiento.col55}}</td>
+									<td>{{Cumplimiento.col56}}</td>
+									<td>{{Cumplimiento.col57}}</td>
+									<td>{{Cumplimiento.col58}}</td>
+									<td>{{Cumplimiento.col59}}</td>
+									<td>{{Cumplimiento.col60}}</td>
+									<td>{{Cumplimiento.col61}}</td>
+									<td>{{Cumplimiento.col62}}</td>
+									<td>{{Cumplimiento.col63}}</td>
+									<td>{{Cumplimiento.col64}}</td>
+									<td>{{Cumplimiento.col65}}</td>
+									<td>{{Cumplimiento.col66}}</td>
+									<td>{{Cumplimiento.col67}}</td>
+									<td>{{Cumplimiento.col68}}</td>
+									<td>{{Cumplimiento.col69}}</td>
+									<td>{{Cumplimiento.col70}}</td>
+									<td>{{Cumplimiento.col71}}</td>
+									
+									
+									
+									<td>{{Cumplimiento.estatus}}</td>
+ 									<td>{{Cumplimiento.progreso}}%</td> 
+									<td>
+
+										<button class="btn btn-success" data-toggle="tooltip"
+											title="Editar" ng-click="editar(Cumplimiento.id)">
+											<i class="glyphicon glyphicon-pencil"></i>
+										</button>
+										
+										<button class="btn btn-danger" data-toggle="tooltip"
+											title="Borrar" ng-click="borrar(Cumplimiento.id)">
+											<i class="glyphicon glyphicon-remove"></i>
+										</button>
+										
+<!-- 										<a class="btn btn-warning" -->
+<!-- 										data-toggle="tooltip" -->
+<!-- 										title="Imprimir Ticket" href="listas/pdf/{{Lista.id}}" -->
+<!-- 										download="{{'ListaAsistencia_'+Lista.proyecto+'.pdf'}}"> <i -->
+<!-- 											class="glyphicon glyphicon-print"></i> -->
+<!-- 									</a> -->
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<button type="submit" title="Registrar" value="enviar" class="btn btn-primary"
+							onclick="location='#/altaCumplimiento'">Registrar Cumplimiento de LB</button>
+						<!-- /.table-responsive -->
+					</div>
+					<!-- /.panel-body -->
+				</div>
+				<!-- /.panel -->
+			</div>
+			<div>
+				<ul class="pagination .pagination-sm">
+					<li ng-repeat="abc in paginas" id="{{'pag'+abc}}"><a
+						ng-click="CumplimientosPage(abc)">{{abc}}</a></li>
+
+				</ul>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- 		<div class="row"> -->
+		<!-- 			<ul class="pagination .pagination-sm"> -->
+		<!-- 				<li ng-repeat="abc in paginas" id="{{'pag'+abc}}" -->
+		<!-- 					ng-click="cargarPagina(abc)"><a>{{abc}}</a></li> -->
+		<!-- 			</ul> -->
+		<!-- 		</div> -->
+	</div>
+</div>

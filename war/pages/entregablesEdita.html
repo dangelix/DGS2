@@ -1,0 +1,105 @@
+<div class="col-sm-8 text-left">
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Alta de Entregables</h1>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /.row -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Registro de Entregables</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+						<form>
+							<div class="form-group col-md-12">                        	
+<!-- 								<label for="email">Libro Blanco:</label>  -->
+<!-- 								<select -->
+<!-- 									class="form-control" ng-model="newEntregable.proyecto"> -->
+<!-- <!-- 									<option value= "-1"></option>  -->
+<!-- 									<option ng-repeat="Proyecto in Proyectos" >{{Proyecto.nombre}}</option> -->
+<!-- 								</select> -->
+<!-- <!-- 								<button class="btn btn-primary" ng-click="cargaProyectos()"><i class="glyphicon glyphicon-refresh" aria-hidden="true"></i></button> -->
+									*T&iacute;tulo Libro Blanco:<br> <input type="text" class="form-control"
+									ng-model="newEntregable.proyecto" disabled> <br>
+
+							</div>
+							<div class="col-md-12">
+								*T&iacute;tulo del Entregable:<br> <input type="text" class="form-control"
+									ng-model="newEntregable.titulo"> <br>
+							</div>
+<!-- 							<div class="col-md-12"> -->
+<!-- 								*Subtitulo:<br> <input type="text" class="form-control" -->
+<!-- 									ng-model="newEntregable.subtitulo"> <br> -->
+<!-- 							</div> -->
+							
+<!-- 							<div class="col-md-3" >						  -->
+<!--                           		Fecha de solicitud:<br> -->
+<!--                           		<input type="date" class="form-control" ng-model="newEntregable.fechaSolicitud">                          	 -->
+<!--                          	</div>   -->
+                         	<div class="col-md-3" >						 
+                          		Fecha de entrega:<br>
+                          		<input type="date" class="form-control" ng-model="newEntregable.fechaEntrega"><br>                          	
+                         	</div> <br>   
+                         	         <div class="col-md-3">*Avances en el Programa de trabajo:<br> 
+		                    		<select class="form-control" ng-model="newEntregable.avances" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>Capturado</option>			
+										
+									</select>
+							   </div>    
+							    <br>   
+                         	         <div class="col-md-3">*Descripci&oacute;n de las actividades mas importantes realizadas:<br> 
+		                    		<select class="form-control" ng-model="newEntregable.actividades" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>Capturado</option>			
+										
+									</select>
+							   </div>    
+							    <br>   
+                         	         <div class="col-md-3">*Constancia de reuniones sostenidas en el periodo:<br> 
+		                    		<select class="form-control" ng-model="newEntregable.constancias" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>Capturado</option>			
+										
+									</select>
+							   </div>    
+                         
+
+								<br>
+<!--  								<div class="col-md-3">*Estatus General:<br>  -->
+<!-- 		                    		<select class="form-control" ng-model="newEntregable.estatus" ng-required="true"> -->
+<!-- 										<option>Listo</option> -->
+<!-- 										<option>En proceso</option> -->
+<!-- 										<option>Capturado</option>			 -->
+<!-- 									</select> -->
+<!-- 							   </div>			                    	 -->
+							 
+							 
+                          
+                  </div>
+                   
+                         	
+                       
+							<div class="col-md-12">
+								<button type="submit" value="Registrar" class="btn btn-primary"
+									ng-click="editaEntregable(newEntregable)">Modificar</button>
+							</div>
+						</form>
+						<!-- /.table-responsive -->
+					</div>
+					<!-- /.panel-body -->
+				</div>
+				<!-- /.panel -->
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+	</div>
+</div>
+</div ng-view>
+

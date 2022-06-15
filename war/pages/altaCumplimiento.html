@@ -1,0 +1,644 @@
+<div class="col-sm-8 text-left">
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Alta de cumplimientos de LB</h1>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /.row -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Cuadro de cumplimiento general</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+						<form>
+							<div class="form-group col-md-12">                        	
+								<label for="email">Libro Blanco:</label> 
+								<select
+									class="form-control" ng-model="Cumplimiento.proyecto">
+									<option ng-repeat="Proyecto in Proyectos" >{{Proyecto.nombre}}</option>
+								</select>
+
+							</div>
+							<div class="col-md-12">
+								*Proveedor:<br> <select class="form-control" ng-model="Cumplimiento.proveedor" title="test titulo" ng-required="true">
+										<option>V&aacute;zquez Nava Consultores y Abogados, S. C.</option>
+										<option>SIControl, S. C.</option>
+										<option>Full Service de M&eacute;xico, S. A. de C. V.</option>			
+											
+									</select>
+							 
+                      
+                         	         
+								
+ 							   <div class="col-md-1">1
+		                    		<select class="form-control" ng-model="Cumplimiento.col1" title="An&aacute;lisis de la normatividad aplicable para el desarrollo de los trabajos." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div>  
+							
+							    <div class="col-md-1">2
+		                    		<select class="form-control" ng-model="Cumplimiento.col2" title="Investigaci&oacute;n de normatividad aplicable y fuentes potenciales de informaci&oacute;n" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div>  
+							   <div class="col-md-2" title="hdhdhhdhdhd">
+								Obs1:<br> <input type="text" class="form-control"
+									ng-model="Entregable.obs1"> 
+							</div> 
+							   	   <div class="col-md-1">3
+		                    		<select class="form-control" ng-model="Cumplimiento.col3" title="Reuni&oacute;n inicial para dar a conocer el programa de trabajo, la metodolog&iacute;a y al equipo consultor." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div>  
+							
+							    <div class="col-md-1">4
+		                    		<select class="form-control" ng-model="Cumplimiento.col4" title="Presentaci&oacute;n del Programa General de Trabajo" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">5
+		                    		<select class="form-control" ng-model="Cumplimiento.col5" title="Elaboración del plan de trabajo, presentación de inducción y metodología, lista de asistencia" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+						
+							   <div class="col-md-2" title="hdhdhhdhdhd">
+								Obs1:<br> <input type="text" class="form-control"
+									ng-model="Entregable.obs2"> 
+							</div> 
+							 <div class="col-md-1">6
+		                    		<select class="form-control" ng-model="Cumplimiento.col6" title="Designación de enlaces de parte del Prestador de servicios externo para el desarrollo de los trabajos." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div>
+							     <div class="col-md-2" title="hdhdhhdhdhd">
+								Obs:<br> <input type="text" class="form-control"
+									ng-model="Entregable.obsX"> 
+							</div>   
+							
+							    <div class="col-md-1">7
+		                    		<select class="form-control" ng-model="Cumplimiento.col7" title="Diseño del guión de contenido preliminar del Libro Blanco a documentarse, especificando capítulos, subcapítulos y apartados específicos, de conformidad con la normatividad que en su caso le sea aplicable y atendiendo la naturaleza, duración, características y alcance del mismo, el cual fungir&aacute; como directriz para la recopilación de información." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">8
+		                    		<select class="form-control" ng-model="Cumplimiento.col8" title="Definición de información a requerir a la unidad administrativa" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">9
+		                    		<select class="form-control" ng-model="Cumplimiento.col9" title="Solicitud de informaci&oacute;n  No. 1" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">10
+		                    		<select class="form-control" ng-model="Cumplimiento.col10" title="Solicitud de informaci&oacute;n numerales I. Presentaci&oacute;n y  II. Fundamento legal  y objetivo del Libro Blanco." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							    <div class="col-md-1">11
+		                    		<select class="form-control" ng-model="Cumplimiento.col11" title="Solicitud de informaci&oacute;n numeral III. Antecedentes." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">12
+		                    		<select class="form-control" ng-model="Cumplimiento.col12" title="Solicitud de informaci&oacute;n numeral IV. Marco normativo aplicable" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							    <div class="col-md-1">13
+		                    		<select class="form-control" ng-model="Cumplimiento.col13" title="Solicitud de informaci&oacute;n numeral V. Vinculaci&oacute;n del programa, proyecto o pol&iacute;tica p&uacute;blica con el Plan de Desarrollo del Estado de M&eacute;xico." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							    <div class="col-md-1">14
+		                    		<select class="form-control" ng-model="Cumplimiento.col14" title="Solicitud de Informaci&oacute;n numerales VI.  S&iacute;ntesis ejecutiva del programa o proyecto y VII. Acciones realizadas. Del 23 al 27 de agosto de 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">15
+		                    		<select class="form-control" ng-model="Cumplimiento.col15" title="Solicitud de las relaciones que identifiquen el estatus de seguimiento a las observaciones determinadas por los &oacute;rganos fiscalizadores internos y externos.  Numeral VIII. Seguimiento y control. Del 18 al 29 de octubre 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							      <div class="col-md-1">16
+		                    		<select class="form-control" ng-model="Cumplimiento.col16" title="Solicitud del documento que narre el avance y cumplimiento de las metas y objetivos del programa Compras Covid-19 en los ejercicio 2020 y 2021.  Numeral IX. Resultados y beneficios alcanzados. Del 1 al 5 de noviembre de 2021" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">17
+		                    		<select class="form-control" ng-model="Cumplimiento.col17" title="Solicitud de los  Numerales X.  Resumen Ejecutivo del Informe final de la persona responsable de la ejecución del programa ejercicio 2020 y 2021 y XI. Anexos. Del 1 al 5 de noviembre 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1" title="Observaciones de Requerimientos de informaci&oacute;n">
+								Obs:<br> <input type="text" class="form-control"
+									ng-model="Entregable.obs3"> 
+							</div>  
+							 <div class="col-md-1">18
+		                    		<select class="form-control" ng-model="Cumplimiento.col18" title="El prestador de servicios externo sostendr&aacute; reuniones y/o entrevistas con el enlace designado, con la finalidad de recopilar la documentaci&oacute;n, para lo cual, el Despacho realizar&aacute; listados de informaci&oacute;n necesaria para la integraci&oacute;n del Libro Blanco de conformidad con los guiones preliminares. Cabe señalar que conforme avance la revisi&oacute;n, se generar&aacute;n nuevos requerimientos.  Por su parte, los enlaces deber&aacute;n proporcionar, al grupo consultor, la totalidad de la documentaci&oacute;n requerida en el menor tiempo posible ya sea f&iacute;sica o digital. Cabe señalar que el Despacho recibir&aacute; y examinar&aacute; documentos que re&uacute;nan las condiciones de oficialidad, as&iacute; como los dem&aacute;s elementos de forma necesarios, tales como que sean legibles, sean las versiones definitivas y est&eacute;n completos." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							    <div class="col-md-1">19
+		                    		<select class="form-control" ng-model="Cumplimiento.col19" title="El prestador de servicios externo celebra reuniones o entrevistas de trabajo con el personal designado con el objeto de solicitar informaci&oacute;n adicional o complementaria, as&iacute; como informar de posibles “&aacute;reas de oportunidad” detectadas durante la revisi&oacute;n." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">20
+		                    		<select class="form-control" ng-model="Cumplimiento.col20" title="Reuniones de trabajo" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							      <div class="col-md-1">21
+		                    		<select class="form-control" ng-model="Cumplimiento.col21" title="Entrevista a los servidores p&uacute;blicos designados. Del 19 al 23 de julio 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">22
+		                    		<select class="form-control" ng-model="Cumplimiento.col22" title="Entrevista a los servidores p&uacute;blicos designados. Del 2 al 6 de agosto  de 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							   
+							   
+							   
+								 <div class="col-md-1">23
+		                    		<select class="form-control" ng-model="Cumplimiento.col23" title="Entrevista a los servidores p&uacute;blicos designados. Del 16 al 20  de agosto  de 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							    <div class="col-md-1">24
+		                    		<select class="form-control" ng-model="Cumplimiento.col24" title="Entrevista a los servidores p&uacute;blicos designados. Del 30 de agosto al 03 de septiembre de 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">25
+		                    		<select class="form-control" ng-model="Cumplimiento.col25" title="Entrevista a los servidores p&uacute;blicos designados. Del 13 al 17 de  septiembre de 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							      <div class="col-md-1">26
+		                    		<select class="form-control" ng-model="Cumplimiento.col26" title="Entrevista a los servidores p&uacute;blicos designados. Del 27 de septiembre al 1 de octubre de 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">27
+		                    		<select class="form-control" ng-model="Cumplimiento.col27" title="Entrevista a los servidores p&uacute;blicos designados. Del 11 de octubre al 26 de noviembre de 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 							
+							     <div class="col-md-1">28
+		                    		<select class="form-control" ng-model="Cumplimiento.col28" title="Entrevista a los servidores p&uacute;blicos designados. Del 6 al 10 de diciembre de  2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							   
+							   
+							   
+								 <div class="col-md-1">29
+		                    		<select class="form-control" ng-model="Cumplimiento.col29" title="Entrevista a los servidores p&uacute;blicos designados. Del 20 al 24 de diciembre de  2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							    <div class="col-md-1">30
+		                    		<select class="form-control" ng-model="Cumplimiento.col30" title="El Prestador de servicios externo recepciona la informaci&oacute;n solicitada." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">31
+		                    		<select class="form-control" ng-model="Cumplimiento.col31" title="El Prestador de servicios externo digitaliza la informaci&oacute;n entregada, en su caso." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							      <div class="col-md-1">32
+		                    		<select class="form-control" ng-model="Cumplimiento.col32" title="An&aacute;lisis jur&iacute;dico – normativo de la documentaci&oacute;n soporte que ser&aacute; integrada al Libro Blanco, con la finalidad de verificar su sustento legal, financiero y de gesti&oacute;n sustantiva y adjetiva, conforme a las disposiciones aplicables. Principalmente, se verificar&aacute; la congruencia y consistencia de datos, fechas y cifras; se constatar&aacute; la suficiencia de la documentaci&oacute;n como sustento de la acci&oacute;n que se documenta; se verificar&aacute; la cronolog&iacute;a de las actividades desarrolladas por el programa o proyecto; y se corroborar&aacute; el cumplimiento de la normatividad aplicable a cada acci&oacute;n." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">33
+		                    		<select class="form-control" ng-model="Cumplimiento.col33" title="Elaboraci&oacute;n de notas explicativas y  cuadros resumen en aquellos casos en que, por el volumen o complejidad de la informaci&oacute;n se considere conveniente realizar descripciones espec&iacute;ficas para dar mayor claridad y transparencia." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 	
+							      <div class="col-md-1">34
+		                    		<select class="form-control" ng-model="Cumplimiento.col34" title="Redacci&oacute;n de los apartados descriptivos contenidos en el Libro Blanco (presentaci&oacute;n, antecedentes, marco normativo, s&iacute;ntesis ejecutiva, resultados y beneficios, entre otros)." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 						   
+							   
+							   
+								 <div class="col-md-1">35
+		                    		<select class="form-control" ng-model="Cumplimiento.col35" title="Solicitud y obtenci&oacute;n de soporte documental y su digitalizaci&oacute;n, en su caso" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							    <div class="col-md-1">36
+		                    		<select class="form-control" ng-model="Cumplimiento.col36" title="Revisi&oacute;n y an&aacute;lisis de la documentaci&oacute;n presentada, considerando diseño de c&eacute;dulas, notas explicativas, cuadro resumen." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">37
+		                    		<select class="form-control" ng-model="Cumplimiento.col37" title="Procesar la informaci&oacute;n disponible en plataformas p&uacute;blicas de compras" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							      <div class="col-md-1">38
+		                    		<select class="form-control" ng-model="Cumplimiento.col38" title="Versi&oacute;n preliminar del Libro Blanco aprobada por los enlaces responsables y los Titulares de los &oacute;rganos Internos de Control correspondientes, ser&aacute; remitido al Secretario T&eacute;cnico del Comit&eacute; T&eacute;cnico para la Autorizaci&oacute;n y Seguimiento de los Libros Blancos del Gobierno del Estado de M&eacute;xico, quien revisar&aacute; su correcta y oportuna integraci&oacute;n y lo informar&aacute; al Comit&eacute; T&eacute;cnico para la Autorizaci&oacute;n y Seguimiento de los Libros Blancos del Gobierno del Estado de M&eacute;xico." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">39
+		                    		<select class="form-control" ng-model="Cumplimiento.col39" title="Apartado I del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 	
+							   <div class="col-md-1">40
+		                    		<select class="form-control" ng-model="Cumplimiento.col40" title="Apartado II del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">41
+		                    		<select class="form-control" ng-model="Cumplimiento.col41" title="Apartado III del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>														
+									</select>
+							   </div> 	
+							
+							 <div class="col-md-1">42
+		                    		<select class="form-control" ng-model="Cumplimiento.col42" title="Apartado IV del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							      <div class="col-md-1">43
+		                    		<select class="form-control" ng-model="Cumplimiento.col43" title="Apartado V del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">44
+		                    		<select class="form-control" ng-model="Cumplimiento.col44" title="Apartado VI del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 	
+							      <div class="col-md-1">45
+		                    		<select class="form-control" ng-model="Cumplimiento.col45" title="Apartado VII del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 						   
+							   
+							   
+								 <div class="col-md-1">46
+		                    		<select class="form-control" ng-model="Cumplimiento.col46" title="Apartado VIII del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							    <div class="col-md-1">47
+		                    		<select class="form-control" ng-model="Cumplimiento.col47" title="Apartado IX del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">48
+		                    		<select class="form-control" ng-model="Cumplimiento.col48" title="Apartado X del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							      <div class="col-md-1">49
+		                    		<select class="form-control" ng-model="Cumplimiento.col49" title="Apartado XI del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">50
+		                    		<select class="form-control" ng-model="Cumplimiento.col50" title="Selecci&oacute;n de documentaci&oacute;n para su integraci&oacute;n al Libro Blanco, del 30/08/2021 al 26/11/2021" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 	
+							   <div class="col-md-1">51
+		                    		<select class="form-control" ng-model="Cumplimiento.col51" title="Elaboraci&oacute;n del Libro Blanco, cap&iacute;tulos I a VI, del 06/09/2021 al 26/11/2021" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">52
+		                    		<select class="form-control" ng-model="Cumplimiento.col52" title="Elaboraci&oacute;n del Libro Blanco, cap&iacute;tulos VII a XI, del 04/10/2021 al 26/11/2021" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>														
+									</select>
+							   </div> 	
+							  <div class="col-md-1">53
+		                    		<select class="form-control" ng-model="Cumplimiento.col53" title="Entrega al Secretario T&eacute;cnico del Comit&eacute; T&eacute;cnico para la elaboraci&oacute;n e integraci&oacute;n de Libros Blancos del ejemplar preliminar en formato word y PDF. Del 29 de noviembre al 3 de diciembre de 2021" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>														
+									</select>
+							   </div> 	
+							         <div class="col-md-1">54
+		                    		<select class="form-control" ng-model="Cumplimiento.col54" title="Consolidaci&oacute;n de la informaci&oacute;n de las distintas acciones en un &uacute;nico archivo digital, a fin de tener una fuente de datos &uacute;nica, segura, confiable y certera, que incluya un sistema inform&aacute;tico integral de gesti&oacute;n que integre una herramienta de b&uacute;squeda din&aacute;mica de informaci&oacute;n, que facilite la obtenci&oacute;n de la misma para atender de manera expedita, en su caso, los requerimientos de los diferentes &oacute;rganos de fiscalizaci&oacute;n." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">55
+		                    		<select class="form-control" ng-model="Cumplimiento.col55" title="Diseño del Guion de Contenido definitivo de cada Libro Blanco, especificando cap&iacute;tulos, subcap&iacute;tulos y apartados espec&iacute;ficos, de conformidad con la normatividad y acciones realizadas que en su caso le sea aplicable, y atendiendo la naturaleza, duraci&oacute;n, caracter&iacute;sticas y alcance del mismo." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 	
+							      <div class="col-md-1">56
+		                    		<select class="form-control" ng-model="Cumplimiento.col56" title="Informe Final y Gui&oacute;n de Contenido Definitivo de cada Libro Blanco a documentarse." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 						   
+							   
+							   
+								 <div class="col-md-1">57
+		                    		<select class="form-control" ng-model="Cumplimiento.col57" title="Presentaci&oacute;n de cada Libro Blanco." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							    <div class="col-md-1">58
+		                    		<select class="form-control" ng-model="Cumplimiento.col58" title="Versi&oacute;n final del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">59
+		                    		<select class="form-control" ng-model="Cumplimiento.col59" title="Diseño del gui&oacute;n de contenido del Libro Blanco, especificando cap&iacute;tulos, subcap&iacute;tulos y apartados espec&iacute;ficos." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							      <div class="col-md-1">60
+		                    		<select class="form-control" ng-model="Cumplimiento.col60" title="Estructurar la versi&oacute;n p&uacute;blica del Libro Blanco" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">61
+		                    		<select class="form-control" ng-model="Cumplimiento.col61" title="Elaboraci&oacute;n y presentaci&oacute;n de informes mensuales de avance que contendr&aacute;n: Avances en el Programa de Trabajo, Descripcion de las actividades mas importantes realizadas, Constancias de reuniones en el periodo" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 	
+							   <div class="col-md-1">62
+		                    		<select class="form-control" ng-model="Cumplimiento.col62" title="El prestador de servicios externo conforma y presenta el Libro Blanco para su entrega 5 ejemplares digitales y 5 ejemplares  impresos  del Libro Blanco." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">63
+		                    		<select class="form-control" ng-model="Cumplimiento.col63" title="Elaboraci&oacute;n de informes de avances  mensuales" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>														
+									</select>
+							   </div> 	
+							  <div class="col-md-1">64
+		                    		<select class="form-control" ng-model="Cumplimiento.col64" title="Entrega de ejemplares definitivos." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>														
+									</select>
+							   </div> 
+								      <div class="col-md-1">65
+		                    		<select class="form-control" ng-model="Cumplimiento.col65" title="Primer entregable con fecha 6 de agosto 2021, del Programa General de Trabajo, calendarizaci&oacute;n de asesor&iacute;as, presentaci&oacute;n de inducci&oacute;n  y listas de asistencia del 2 de agosto del 2021" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">66
+		                    		<select class="form-control" ng-model="Cumplimiento.col66" title="Segundo entregable: Informe ejecutivo mensual del 27 al 30 de septiembre." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 	
+							   <div class="col-md-1">67
+		                    		<select class="form-control" ng-model="Cumplimiento.col67" title="Informe ejecutivo mensual  al 31 de octubre 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>			
+											
+									</select>
+							   </div> 
+							     <div class="col-md-1">68
+		                    		<select class="form-control" ng-model="Cumplimiento.col68" title="Tercer entregable: Informe final de los servicios y gui&oacute;n de contenido del Libro Blanco. El 15 de diciembre de 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>														
+									</select>
+							   </div> 	
+							  <div class="col-md-1">69
+		                    		<select class="form-control" ng-model="Cumplimiento.col69" title="Entregable final: Cinco ejemplares impresos y la versi&oacute;n digital del Libro Blanco. El 31 de diciembre de 2021." ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>No aplica</option>														
+									</select>
+							   </div> 							
+							
+							
+							
+							
+							
+							
+							
+							   <br>
+						
+									
+                  </div>
+                   
+                         	
+                       
+							<div class="col-md-12">
+								<button type="submit" value="Registrar" class="btn btn-primary"
+									ng-click="registraCumplimiento(Cumplimiento)">Registrar</button>
+							</div>
+						</form>
+						<!-- /.table-responsive -->
+					</div>
+					<!-- /.panel-body -->
+				</div>
+				<!-- /.panel -->
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+	</div>
+</div>
+</div ng-view>
+

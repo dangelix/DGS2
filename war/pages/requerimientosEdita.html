@@ -1,0 +1,171 @@
+<div class="col-sm-8 text-left">
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Alta de Requerimientos</h1>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /.row -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Registro de Requerimientos</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+						<form>
+							<div class="form-group col-md-12">                        	
+<!-- 								<label for="email">Libro Blanco:</label>  -->
+<!-- 								<select -->
+<!-- 									class="form-control" ng-model="newRequerimiento.proyecto"> -->
+<!-- <!-- 									<option value= "-1"></option>  -->
+<!-- 									<option ng-repeat="Proyecto in Proyectos" >{{Proyecto.nombre}}</option> -->
+<!-- 								</select> -->
+<!-- <!-- 								<button class="btn btn-primary" ng-click="cargaProyectos()"><i class="glyphicon glyphicon-refresh" aria-hidden="true"></i></button> -->
+									*Libro Blanco:<br> <input type="text" class="form-control"
+									ng-model="newRequerimiento.proyecto" disabled> <br>
+
+							</div>
+							<div class="col-md-12">
+								*T&iacute;tulo del Requerimiento:<br> <input type="text" class="form-control"
+									ng-model="newRequerimiento.titulo"> <br>
+							</div>
+							<div class="col-md-12">
+								*Subtitulo:<br> <input type="text" class="form-control"
+									ng-model="newRequerimiento.subtitulo"> <br>
+							</div>
+							<div class="col-md-6">*Etapa:<br> 
+		                    		<select class="form-control" ng-model="newRequerimiento.etapa" ng-required="true">
+										<option>Primera</option>
+										<option>Complemento de 1a </option>
+										<option>Segunda</option>			
+										<option>Tercera</option>	
+										<option>Cuarta</option>	
+										<option>Quinta</option>	
+									
+									</select>
+							   </div>
+							<div class="col-md-3" >						 
+                          		Fecha de solicitud:<br>
+                          		<input type="date" class="form-control" ng-model="newRequerimiento.fechaSolicitud">                          	
+                         	</div>  
+                         	<div class="col-md-3" >						 
+                          		Fecha de entrega:<br>
+                          		<input type="date" class="form-control" ng-model="newRequerimiento.fechaEntrega"><br>                          	
+                         	</div> <br>   
+                         	             
+                         
+<!-- 							<div class="col-md-6"> -->
+<!-- 		                          Libro Blanco:<br> -->
+<!-- 		                          <input type="text" class="form-control" ng-model="Requerimiento.proyecto"> -->
+<!-- 		                          <br> -->
+<!--                     		</div> -->
+								<br>
+ 								<div class="col-md-3">*2017:<br> 
+		                    		<select class="form-control" ng-model="newRequerimiento.anio17" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>N/A -Fuera de periodo</option>			
+										<option>N/A -Informaci&oacute;n confidencial</option>	
+										<option>N/A -Existe dato sin procesar</option>	
+										<option>N/A -No se cuenta con el dato</option>	
+										<option>N/A -Por normatividad</option>	
+										<option>N/A -Sin auditar</option>	
+									</select>
+							   </div>			                    	
+							   <div class="col-md-3">*2018:<br> 
+		                    		<select class="form-control" ng-model="newRequerimiento.anio18" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>N/A -Fuera de periodo</option>			
+										<option>N/A -Informaci&oacute;n confidencial</option>	
+										<option>N/A -Existe dato sin procesar</option>	
+										<option>N/A -No se cuenta con el dato</option>	
+										<option>N/A -Por normatividad</option>	
+										<option>N/A -Sin auditar</option>	
+									</select>
+							   </div>	
+							   <div class="col-md-3">*2019:<br> 
+		                    		<select class="form-control" ng-model="newRequerimiento.anio19" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>N/A -Fuera de periodo</option>			
+										<option>N/A -Informaci&oacute;n confidencial</option>	
+										<option>N/A -Existe dato sin procesar</option>	
+										<option>N/A -No se cuenta con el dato</option>	
+										<option>N/A -Por normatividad</option>	
+										<option>N/A -Sin auditar</option>	
+									</select>
+							   </div>		                		
+						
+								<div class="col-md-3">*2020:<br> 
+		                    		<select class="form-control" ng-model="newRequerimiento.anio20" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>N/A -Fuera de periodo</option>			
+										<option>N/A -Informaci&oacute;n confidencial</option>	
+										<option>N/A -Existe dato sin procesar</option>	
+										<option>N/A -No se cuenta con el dato</option>	
+										<option>N/A -Por normatividad</option>	
+										<option>N/A -Sin auditar</option>	
+									</select><br>
+							   </div>		
+							   <div class="col-md-3">*2021:<br> 
+		                    		<select class="form-control" ng-model="newRequerimiento.anio21" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>N/A -Fuera de periodo</option>			
+										<option>N/A -Informaci&oacute;n confidencial</option>	
+										<option>N/A -Existe dato sin procesar</option>	
+										<option>N/A -No se cuenta con el dato</option>	
+										<option>N/A -Por normatividad</option>	
+										<option>N/A -Sin auditar</option>	
+									</select>
+							   </div>		
+							   <div class="col-md-3">*2022:<br> 
+		                    		<select class="form-control" ng-model="newRequerimiento.anio22" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>N/A -Fuera de periodo</option>			
+										<option>N/A -Informaci&oacute;n confidencial</option>	
+										<option>N/A -Existe dato sin procesar</option>	
+										<option>N/A -No se cuenta con el dato</option>	
+										<option>N/A -Por normatividad</option>	
+										<option>N/A -Sin auditar</option>	
+									</select>
+							   </div>
+							   <div class="col-md-3">*2023:<br> 
+		                    		<select class="form-control" ng-model="newRequerimiento.anio23" ng-required="true">
+										<option>Listo</option>
+										<option>En proceso</option>
+										<option>N/A -Fuera de periodo</option>			
+										<option>N/A -Informaci&oacute;n confidencial</option>	
+										<option>N/A -Existe dato sin procesar</option>	
+										<option>N/A -No se cuenta con el dato</option>	
+										<option>N/A -Por normatividad</option>	
+										<option>N/A -Sin auditar</option>	
+									</select>
+							   </div>
+							 
+                          
+                  </div>
+                   
+                         	
+                       
+							<div class="col-md-12">
+								<button type="submit" value="Registrar" class="btn btn-primary"
+									ng-click="editaRequerimiento(newRequerimiento)">Modificar</button>
+							</div>
+						</form>
+						<!-- /.table-responsive -->
+					</div>
+					<!-- /.panel-body -->
+				</div>
+				<!-- /.panel -->
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+	</div>
+</div>
+</div ng-view>
+

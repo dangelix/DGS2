@@ -1,0 +1,71 @@
+<div class="col-sm-8 text-left">
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Alta de Libro Blanco</h1>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /.row -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Registro de Libro Blanco</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+						<form>
+							<div class="col-md-12">
+								*Nombre del Libro Blanco:<br> <input type="text" class="form-control"
+									ng-model="Proyecto.nombre"> <br>
+							</div>
+								               
+                    		<div class="row">
+							<div class="col-md-6">
+								*Proveedor:<br> <select class="form-control"
+									ng-model="Proyecto.proveedor" ng-required="true">
+									<option>V&aacute;zquez Nava Consultores y Abogados, S. C.</option>
+									<option>SIControl, S. C.</option>
+									<option>Full Service de M&eacute;xico, S. A. de C. V.</option>			
+								
+														
+								</select>
+							</div>							
+							 
+                           <div class="col-md-6">
+                          		*Analista:<br>
+                          		<select class="form-control"
+									ng-model="Proyecto.analista" ng-required="true">
+									<option>Jos&eacute; Julio Gonz&aacute;lez Rojas</option>
+									<option>Laura Elena Figueroa S&aacute;nchez</option>
+									<option>Noem&iacute; Miraflores Lagunas</option>	
+									<option>Norma Elo&iacute;sa Galindo Ram&iacute;rez</option>	
+										
+								
+														
+								</select>
+                         		                    		
+                          </div><br><br>
+                  </div>
+                   
+                         		<div class="col-md-12">
+                          			*Dependencia:<br>
+                         			<input type="text" class="form-control" ng-model="Proyecto.dependencia">
+                         		</div>	                          		
+                       
+							<div class="col-md-12">
+								<button type="submit" value="Registrar" class="btn btn-primary"
+									ng-click="registraProyecto(Proyecto)">Registrar</button>
+							</div>
+						</form>
+						<!-- /.table-responsive -->
+					</div>
+					<!-- /.panel-body -->
+				</div>
+				<!-- /.panel -->
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+	</div>
+</div>
+</div ng-view>
+
